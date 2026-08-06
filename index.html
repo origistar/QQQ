@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>纳指100 QQQ 定投决策 · v3.2</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#f5f6f8;color:#1a1a2e;line-height:1.6}
+.c{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+.h{text-align:center;padding:20px 0 8px}.h h1{font-size:22px;font-weight:700}
+.h .d{font-size:13px;color:#6b7280;margin-top:4px}
+.r{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:12px}
+.cd{background:#fff;border-radius:12px;padding:14px 10px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04);border:1px solid #e5e7eb}
+.va{font-size:22px;font-weight:700;line-height:1.2}.lb{font-size:11px;color:#6b7280;margin-top:2px}
+.dc{background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;border-radius:14px;padding:20px;text-align:center;margin:16px 0}
+.dc .bg{font-size:34px;font-weight:800;line-height:1}.dc .sb{font-size:14px;opacity:.9;margin-top:6px}
+.ca{background:#fff;border-radius:12px;padding:14px;margin-bottom:12px;box-shadow:0 1px 3px rgba(0,0,0,.04);border:1px solid #e5e7eb}
+.ca h3{font-size:13px;margin-bottom:8px}
+.tb{width:100%;border-collapse:collapse;font-size:12px}
+.tb th{background:#1e293b;color:#fff;padding:5px 4px;text-align:center;font-weight:600;font-size:10px}
+.tb td{text-align:center;padding:5px 4px;border:1px solid #e5e7eb;font-weight:600;font-size:12px}
+.tb td.lb{background:#f1f5f9;text-align:left;padding-left:6px;font-size:10px}
+.tb td.hi{background:#fef3c7}.tb td.z{color:#cbd5e1}
+.ft{width:100%;border-collapse:collapse;font-size:12px}
+.ft th{background:#f1f5f9;padding:6px 8px;text-align:left;font-weight:600;font-size:11px;border-bottom:2px solid #e5e7eb}
+.ft td{padding:5px 8px;border-bottom:1px solid #e5e7eb;font-size:12px}
+.fo{font-size:10px;color:#6b7280;text-align:center;border-top:1px solid #e5e7eb;padding-top:12px;margin-top:16px}
+.sell{border-color:#dc2626!important;background:#fef2f2!important}
+</style>
+</head>
+<body>
+<div class="c">
+<div class="h"><h1>纳指100 QQQ 定投决策</h1><div class="d">更新: 2026-08-06 08:36 UTC &nbsp;|&nbsp; 数据: 蛋卷+CBOE+yfinance</div></div>
+
+<div class="r">
+<div class="cd"><div class="va">31.64</div><div class="lb">PE-TTM</div></div>
+<div class="cd"><div class="va">15.92</div><div class="lb">VIX 情绪</div></div>
+<div class="cd"><div class="va" style="color:#dc2626">-4.14%</div><div class="lb">回撤 (52周高)</div></div>
+</div>
+
+<div class="r">
+<div class="cd"><div class="va">29,487</div><div class="lb">NDX 纳指100</div></div>
+<div class="cd"><div class="va">$717.30</div><div class="lb">QQQ 价格</div></div>
+<div class="cd"><div class="va">30.0%</div><div class="lb">ROE</div></div>
+</div>
+
+<div class="dc">
+<div class="sb">今日定投</div>
+<div class="bg">¥300 / 日</div>
+<div class="sb">PE=31.6(偏贵) · VIX=15.9(平稳) · 回撤-4.1% → 基准1.0份 × 回撤乘数1.0x = 1.0份</div>
+</div>
+
+
+
+<div class="ca"><h3>买入基准矩阵（PE × VIX）</h3>
+<div style="overflow-x:auto"><table class="tb">
+<tr><th>PE 分档</th><th>贪婪 &lt;13</th><th>平稳 13-18</th><th>恐慌 18-30</th><th>极恐 &gt;30</th></tr>
+<tr><td class="lb">PE &lt; 25（低估）</td><td>1.0</td><td>2.0</td><td>3.0</td><td>4.0</td></tr>
+<tr><td class="lb">PE 25-30（合理）</td><td>0.5</td><td>1.5</td><td>2.0</td><td>3.0</td></tr>
+<tr><td class="lb">PE &gt; 30（偏贵/高估）</td><td class="z">0.0</td><td class="hi">1.0</td><td>1.5</td><td>2.0</td></tr>
+</table></div>
+<p style="font-size:10px;color:#6b7280;margin-top:4px">黄色=当前。PE>35 止盈窗口打开，份数强制为0</p></div>
+
+<div class="ca"><h3>回撤折扣乘数</h3>
+<table class="ft">
+<tr><th>回撤</th><th>&lt;6%</th><th>6-10%</th><th>10-15%</th><th>15-20%</th><th>20-25%</th><th>25-30%</th><th>&gt;30%</th></tr>
+<tr><td style="font-weight:600">乘数</td>
+<td style="background:#fef3c7">×1.0</td>
+<td>×1.5</td>
+<td>×2.0</td>
+<td>×3.0</td>
+<td>×5.0</td>
+<td>×8.0</td>
+<td>×10.0</td></tr>
+</table></div>
+
+<div class="ca"><h3>止盈规则</h3>
+<p style="font-size:12px">PE>35 且 VIX<18 → 周度定抛 10 周卖出 30%<br>PE>38 或 PE>35 且 VIX<13 → 加速 4-5 周卖完<br>PE回落至<35 立即停止止盈</p></div>
+
+<div class="ca"><h3>资金池</h3>
+<p style="font-size:12px">¥100万 正常定投(日上限¥6,000) + ¥50万 备用金(分10份,每份¥5万,回撤>20%启用)</p></div>
+
+<div class="fo">v3.2 金字塔定投 · 数据: 蛋卷基金/CBOE/yfinance · 每日自动更新 · 仅供参考不构成投资建议</div>
+</div>
+</body>
+</html>
