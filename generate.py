@@ -62,7 +62,7 @@ elif vix <= 30:  col, cn = "fear", "恐慌"
 else:            col, cn = "extreme", "极恐"
 
 bm = {
-    ("low","greed"):2.0, ("low","calm"):4.0, ("low","fear"):6.0, ("low","extreme"):8.0,
+    ("low","greed"):1.0, ("low","calm"):2.0, ("low","fear"):3.0, ("low","extreme"):4.0,
     ("mid_low","greed"):0.5, ("mid_low","calm"):1.5, ("mid_low","fear"):2.0, ("mid_low","extreme"):3.0,
     ("mid","greed"):0.5, ("mid","calm"):1.0, ("mid","fear"):1.5, ("mid","extreme"):2.0,
     ("high","greed"):0.0, ("high","calm"):0.5, ("high","fear"):1.0, ("high","extreme"):1.5,
