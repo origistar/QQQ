@@ -3,5 +3,6 @@
   "sell_tier": null,
   "sell_started": null,
   "sell_week": 0,
-  "has_sold": false
+  "has_sold": false,
+  "last_effective_tier": "mid_low"
 }
