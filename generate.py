@@ -50,9 +50,11 @@ dd_ratio = (ndx - ndx52) / ndx52
 dd_pct = round(dd_ratio * 100, 2)
 dd_abs = abs(dd_ratio)
 
-if pe < 25:      tier, tn = "low", "低估"
-elif pe <= 30:   tier, tn = "mid", "合理"
-else:            tier, tn = "high", "偏贵"
+if pe < 28:      tier, tn = "low", "低估"
+elif pe <= 33:   tier, tn = "mid_low", "合理偏低"
+elif pe <= 36:   tier, tn = "mid", "合理"
+elif pe <= 38:   tier, tn = "high", "偏高"
+else:            tier, tn = "sell", "高估/止盈"
 
 if vix < 13:     col, cn = "greed", "贪婪"
 elif vix <= 18:  col, cn = "calm", "平稳"
@@ -60,9 +62,11 @@ elif vix <= 30:  col, cn = "fear", "恐慌"
 else:            col, cn = "extreme", "极恐"
 
 bm = {
-    ("low","greed"):1.0, ("low","calm"):2.0, ("low","fear"):3.0, ("low","extreme"):4.0,
-    ("mid","greed"):0.5, ("mid","calm"):1.5, ("mid","fear"):2.0, ("mid","extreme"):3.0,
-    ("high","greed"):0.0, ("high","calm"):1.0, ("high","fear"):1.5, ("high","extreme"):2.0,
+    ("low","greed"):2.0, ("low","calm"):4.0, ("low","fear"):6.0, ("low","extreme"):8.0,
+    ("mid_low","greed"):0.5, ("mid_low","calm"):1.5, ("mid_low","fear"):2.0, ("mid_low","extreme"):3.0,
+    ("mid","greed"):0.5, ("mid","calm"):1.0, ("mid","fear"):1.5, ("mid","extreme"):2.0,
+    ("high","greed"):0.0, ("high","calm"):0.5, ("high","fear"):1.0, ("high","extreme"):1.5,
+    ("sell","greed"):0.0, ("sell","calm"):0.0, ("sell","fear"):0.0, ("sell","extreme"):0.0,
 }
 base = bm[(tier, col)]
 
@@ -76,8 +80,8 @@ else:                 mult = 10.0
 
 # ---- SELL / BUYBACK STATE MACHINE ----
 today_str = date.today().isoformat()
-t1 = pe > 35 and vix < 18
-t2 = pe > 38 or (pe > 35 and vix < 13)
+t1 = pe > 38 and vix < 18
+t2 = pe > 40 or (pe > 38 and vix < 13)
 
 if t2:
     if not state["sell_active"] or state["sell_tier"] != 2:
@@ -91,7 +95,7 @@ elif t1:
     elif state["sell_tier"] != 2:
         w = (date.today() - date.fromisoformat(state["sell_started"])).days // 7 + 1
         state["sell_week"] = min(w, 10)
-elif pe < 35 and state["sell_active"]:
+elif pe < 38 and state["sell_active"]:
     state["sell_active"] = False
     state["sell_tier"] = None
     state["sell_week"] = 0
@@ -108,9 +112,9 @@ if state.get("has_sold") and not state["sell_active"]:
     elif dd_abs > 0.15:
         buyback = True
         bb_reason = f"回撤{abs(dd_pct):.1f}%>15%，触发买回"
-    elif pe < 30:
+    elif pe < 32:
         buyback = True
-        bb_reason = f"PE={pe:.1f}<30，触发买回"
+        bb_reason = f"PE={pe:.1f}<32，触发买回"
 
 if buyback:
     state["has_sold"] = False
@@ -139,8 +143,8 @@ if sel:
     wp = round(30 / mw, 1)
     sp = "加速" if st == 2 else ""
     sell_html = f'''<div class="ca sell"><strong style="color:#dc2626">\u26a0 止盈进行中（第{sw}/{mw}周）</strong>
-<p style="font-size:12px;margin-top:4px">PE={pe:.1f}>35 | {sp} | 每周卖 <b>{wp}%</b> | 累计建议卖出约 <b>{sw*wp}%</b></p>
-<p style="font-size:11px;color:#6b7280;margin-top:2px">PE回落<35自动停止 | 手工在富途执行卖出</p></div>'''
+<p style="font-size:12px;margin-top:4px">PE={pe:.1f}>38 | {sp} | 每周卖 <b>{wp}%</b> | 累计建议卖出约 <b>{sw*wp}%</b></p>
+<p style="font-size:11px;color:#6b7280;margin-top:2px">PE回落<38自动停止 | 手工在富途执行卖出</p></div>'''
 
 bb_html = ""
 if buyback:
@@ -221,10 +225,10 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Mic
 </table></div>
 
 <div class="ca"><h3>止盈与买回规则</h3>
-<p style="font-size:12px"><b>卖出：</b>PE>35 且 VIX<18 &rarr; 一档，每周卖3%，10周卖完30%<br>
-PE>38 或 PE>35 且 VIX<13 &rarr; 二档加速，每周卖6-8%，4-5周卖完</p>
-<p style="font-size:12px;margin-top:4px"><b>买回：</b>PE回落 &lt;30 或 PE&lt;28 或 回撤 &gt;15% &rarr; 将卖出资金买回QQQ</p>
-<p style="font-size:10px;color:#6b7280;margin-top:2px">PE回落至 &lt;35 立即停止止盈</p></div>
+<p style="font-size:12px"><b>卖出：</b>PE>38 且 VIX<18 &rarr; 一档，每周卖3%，10周卖完30%<br>
+PE>40 或 PE>38 且 VIX<13 &rarr; 二档加速，每周卖6-8%，4-5周卖完</p>
+<p style="font-size:12px;margin-top:4px"><b>买回：</b>PE回落 &lt;32 或 PE&lt;28 或 回撤 &gt;15% &rarr; 将卖出资金买回QQQ</p>
+<p style="font-size:10px;color:#6b7280;margin-top:2px">PE回落至 &lt;38 立即停止止盈</p></div>
 
 <div class="fo">v3.2 金字塔定投 · 数据: 蛋卷基金/CBOE/yfinance · 每日自动更新 · 仅供参考不构成投资建议</div>
 </div>
