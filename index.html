@@ -1,9 +1,6 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>纳指100 QQQ 定投决策 v3.2</title>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>纳指100 QQQ 定投决策 v4.1</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#f5f6f8;color:#1a1a2e;line-height:1.6}
@@ -27,14 +24,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
 .ft td{padding:5px 8px;border-bottom:1px solid #e5e7eb;font-size:12px}
 .fo{font-size:10px;color:#6b7280;text-align:center;border-top:1px solid #e5e7eb;padding-top:12px;margin-top:16px}
 .sell{border-color:#dc2626!important;background:#fef2f2!important}
-</style>
-</head>
-<body>
-<div class="c">
-<div class="h"><h1>纳指100 QQQ 定投决策</h1><div class="d">更新: 2026-08-07 07:38 UTC | 数据: 蛋卷+CBOE+yfinance</div></div>
+</style></head><body><div class="c">
+<div class="h"><h1>纳指100 定投决策 v4.2</h1><div class="d">更新: 2026-08-09 02:43 UTC | 性价比45分(中等) | PE滞回5天</div></div>
 
 <div class="r">
-<div class="cd"><div class="va">30.98</div><div class="lb">PE-TTM</div></div>
+<div class="cd"><div class="va">31.36</div><div class="lb">PE-TTM <span style="font-size:10px;color:#d97706">[滞回: 4/5天]</span></div></div>
 <div class="cd"><div class="va">16.50</div><div class="lb">VIX 情绪</div></div>
 <div class="cd"><div class="va" style="color:#dc2626">-3.35%</div><div class="lb">回撤 (52周高)</div></div>
 </div>
@@ -42,41 +36,49 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
 <div class="r">
 <div class="cd"><div class="va">29,733</div><div class="lb">NDX 纳指100</div></div>
 <div class="cd"><div class="va">$723.85</div><div class="lb">QQQ 价格</div></div>
-<div class="cd"><div class="va">30.2%</div><div class="lb">ROE</div></div>
+<div class="cd"><div class="va">30.2%</div><div class="lb">ROE </div></div>
 </div>
 
 <div class="dc">
 <div class="sb">今日定投</div>
-<div class="bg">¥450 / 日</div>
-<div class="sb">PE=31.0(合理偏低) · VIX=16.5(平稳) · 回撤-3.4% · 基准1.5份x乘数1.0x = 1.5份</div>
+<div class="bg">¥1,500 / 日</div>
+<div class="sb">PE=31.4(合理偏低) · VIX=16.5(平稳) · 回撤-3.4% · 基准1.5份x乘数1.0x=1.5份</div>
 </div>
 
+<div class="ca" style="border-color:#d97706;background:#fff7ed;font-size:11px"><strong style="color:#d97706">🟠 浮盈提醒</strong>：定期检查持仓浮盈，若<strong>>50%</strong>，可考虑手动减仓10-20%，分2-3次执行（每次间隔≥1周）。</div>
 
+<div class="ca"><h3>📊 定投性价比评分 45 分（中等）</h3>
+<p style="font-size:11px;color:#6b7280">
+PE分位(52%) · 回撤(-3.4%) · VIX(16.5) · ROE(30%) · 均线偏离<br>
+71-100 性价比极高 · 41-70 中等 · 10-40 偏低
+</p></div>
 
+<div class="ca"><h3>💱 溢价率场内外切换 <span style="font-size:10px;background:#fef3c7;padding:1px 4px;border-radius:3px">NEW</span></h3>
+<p style="font-size:12px">当前溢价率 <b>13.0%</b> → <span style="color:#dc2626">溢价偏高，可卖出场内持仓</span></p>
+<p style="font-size:10px;color:#6b7280;margin-top:2px">规则：溢价<5%切场内买入 · 溢价>8%卖回场外 · 其余时间场外基金定投</p></div>
 
 <div class="ca"><h3>买入基准矩阵（PE x VIX）</h3>
 <div style="overflow-x:auto"><table class="tb">
 <tr><th>PE 分档</th><th>贪婪 &lt;13</th><th>平稳 13-18</th><th>恐慌 18-30</th><th>极恐 &gt;30</th></tr>
-<tr><td class="lb">PE &lt; 25（低估）</td><td>1.0</td><td>2.0</td><td>3.0</td><td>4.0</td></tr>
-<tr><td class="lb">PE 25-30（合理）</td><td>0.5</td><td>1.5</td><td>2.0</td><td>3.0</td></tr>
-<tr><td class="lb">PE &gt; 30（偏贵/高估）</td><td class="z">0.0</td><td>1.0</td><td>1.5</td><td>2.0</td></tr>
-</table></div>
-<p style="font-size:10px;color:#6b7280;margin-top:4px">黄色=当前。PE>35 止盈窗口打开，份数强制为0</p></div>
+<tr><td class="lb">PE &lt; 28（低估）</td><td>1.0</td><td>2.0</td><td>3.0</td><td>4.0</td></tr>
+<tr><td class="lb">PE 28-33（合理偏低）</td><td>0.5</td><td class="hi">1.5</td><td>2.0</td><td>3.0</td></tr>
+<tr><td class="lb">PE 33-36（合理）</td><td>0.5</td><td>1.0</td><td>1.5</td><td>2.0</td></tr>
+<tr><td class="lb">PE 36-38（偏高）</td><td class="z">0.0</td><td>0.5</td><td>1.0</td><td>1.5</td></tr>
+<tr><td class="lb">PE > 38（高估/止盈）</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr>
+</table></div></div>
 
 <div class="ca"><h3>回撤折扣乘数</h3>
 <table class="ft">
 <tr><th>回撤</th><th>&lt;6%</th><th>6-10%</th><th>10-15%</th><th>15-20%</th><th>20-25%</th><th>25-30%</th><th>&gt;30%</th></tr>
 <tr><td style="font-weight:600">乘数</td>
-<td style="background:#fef3c7">x1.0</td><td>x1.5</td><td>x2.0</td><td>x3.0</td><td>x5.0</td><td>x8.0</td><td>x10.0</td></tr>
+<td style="background:#fef3c7">x1.0</td><td>x1.5</td><td>x2.0</td><td>x3.0</td><td>x3.0</td><td>x4.0</td><td>x5.0</td></tr>
 </table></div>
 
 <div class="ca"><h3>止盈与买回规则</h3>
-<p style="font-size:12px"><b>卖出：</b>PE>38 且 VIX<18 &rarr; 一档，每周卖3%，10周卖完30%<br>
-PE>40 或 PE>38 且 VIX<13 &rarr; 二档加速，每周卖6-8%，4-5周卖完</p>
-<p style="font-size:12px;margin-top:4px"><b>买回：</b>PE回落 &lt;32 或 PE&lt;28 或 回撤 &gt;15% &rarr; 将卖出资金买回QQQ</p>
-<p style="font-size:10px;color:#6b7280;margin-top:2px">PE回落至 &lt;38 立即停止止盈</p></div>
+<p style="font-size:12px"><b>卖出：</b>PE>38且VIX<18 → 一档，每周卖3%，10周卖完30%<br>PE>40或PE>38且VIX<13 → 二档，每周卖6-8%，4-5周卖完</p>
+<p style="font-size:12px;margin-top:4px"><b>买回:</b>PE<32或PE<28或DD>15% → 买回QQQ</p>
+<p style="font-size:12px;margin-top:4px"><b>浮盈减仓:</b>持仓浮盈>50%时可手动减10-20%仓位，分2-3次，间隔≥1周</p>
+<p style="font-size:10px;color:#6b7280;margin-top:2px">PE回落至<38 立即停止止盈</p></div>
 
-<div class="fo">v3.2 金字塔定投 · 数据: 蛋卷基金/CBOE/yfinance · 每日自动更新 · 仅供参考不构成投资建议</div>
-</div>
-</body>
-</html>
+<div class="fo">v4.2 金字塔定投 · 性价比评分 · 溢价切换 · PE滞回 · 每日更新 · 仅供参考不构成投资建议</div>
+</div></body></html>

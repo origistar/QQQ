@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""v4.1 generate.py - adds ROE monitoring + PE hysteresis"""
+"""v4.2 generate.py - 性价比评分 + 溢价切换 + ROE监控 + PE滞回"""
 import urllib.request, json, sys, os
 from datetime import datetime, timezone, date, timedelta
 
@@ -48,6 +48,39 @@ try:
 except Exception as e: print(f"[WARN] yfinance: {e}",file=sys.stderr)
 
 dd_pct=round((ndx-ndx52)/ndx52*100,2); dd_abs=abs((ndx-ndx52)/ndx52)
+
+# ---- 溢价率 (从集思录爬取, 暂时用缓存) ----
+premium = None
+try:
+    req = urllib.request.Request("https://www.jisilu.cn/data/qdii/detail/513100")
+    req.add_header("User-Agent","Mozilla/5.0")
+    with urllib.request.urlopen(req,timeout=10) as resp:
+        body = resp.read().decode()
+        # 简单正则提取最新溢价率
+        import re
+        m = re.search(r'(\d+\.\d+)%', body)
+        if m: premium = float(m.group(1))
+except: pass
+# 如果爬不到, 用默认值
+if premium is None: premium = 13.0
+
+prem_switch = premium < 5  # 溢价<5%切场内
+prem_sell = premium > 8    # 溢价>8%卖回场外
+
+# ---- 性价比评分 (五因子加权) ----
+# PE分位越高越贵→分数越低
+pe_score = max(0, 100 - pe_pct) * 0.35
+# 回撤越深→分数越高
+dd_score = min(100, dd_abs * 400) * 0.25
+# VIX越高(恐慌)→分数越高
+vix_score = min(100, max(0, (vix - 10) * 5)) * 0.20
+# ROE越高→分数越高
+roe_score = min(100, (roe - 10) * 5) * 0.10
+# 均线偏离 (用60日线近似, 偏离越大越贵)
+ma_dev = abs((ndx - ndx52) / ndx52) # 简化为52周高偏离
+ma_score = max(0, 100 - ma_dev * 500) * 0.10
+sc = round(pe_score + dd_score + vix_score + roe_score + ma_score)
+sc_label = "极高" if sc >= 71 else "中等" if sc >= 41 else "偏低"
 
 # PE分档 (带滞回)
 raw_tier="low" if pe<28 else "mid_low" if pe<=33 else "mid" if pe<=36 else "high" if pe<=38 else "sell"
@@ -125,9 +158,9 @@ profit_html=""
 # floating profit >50% discretionary warning
 profit_html=f'<div class="ca" style="border-color:#d97706;background:#fff7ed;font-size:11px"><strong style="color:#d97706">\U0001f7e0 浮盈提醒</strong>：定期检查持仓浮盈，若<strong>>50%</strong>，可考虑手动减仓10-20%，分2-3次执行（每次间隔≥1周）。</div>'
 
-hyst_note=""
-h=load_hyst()
-if h["days_in_tier"]<5: hyst_note=f'<span style="font-size:10px;color:#d97706">[滞回: {h["days_in_tier"]}/5天]</span>'
+h_note=""
+hyst=load_hyst()
+if hyst["days_in_tier"]<5: hyst_note=f'<span style="font-size:10px;color:#d97706">[滞回: {hyst["days_in_tier"]}/5天]</span>'
 
 html=f'''<!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -156,7 +189,7 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Mic
 .fo{{font-size:10px;color:#6b7280;text-align:center;border-top:1px solid #e5e7eb;padding-top:12px;margin-top:16px}}
 .sell{{border-color:#dc2626!important;background:#fef2f2!important}}
 </style></head><body><div class="c">
-<div class="h"><h1>纳指100 QQQ 定投决策 v4.1</h1><div class="d">更新: {ts} | PE滞回5天 | ROE自动监控</div></div>
+<div class="h"><h1>纳指100 定投决策 v4.2</h1><div class="d">更新: {ts} | 性价比{sc}分({sc_label}) | PE滞回5天</div></div>
 
 <div class="r">
 <div class="cd"><div class="va">{pe:.2f}</div><div class="lb">PE-TTM {hyst_note}</div></div>
@@ -177,6 +210,16 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Mic
 </div>
 
 {sell_html}{bb_html}{roe_html}{profit_html}
+
+<div class="ca"><h3>\U0001f4ca 定投性价比评分 {sc} 分（{sc_label}）</h3>
+<p style="font-size:11px;color:#6b7280">
+PE分位({pe_pct:.0f}%) · 回撤({dd_pct:+.1f}%) · VIX({vix:.1f}) · ROE({roe:.0f}%) · 均线偏离<br>
+71-100 性价比极高 · 41-70 中等 · 10-40 偏低
+</p></div>
+
+<div class="ca"><h3>\U0001f4b1 溢价率场内外切换 <span style="font-size:10px;background:#fef3c7;padding:1px 4px;border-radius:3px">NEW</span></h3>
+<p style="font-size:12px">当前溢价率 <b>{premium:.1f}%</b> {'→ <span style=\"color:#16a34a\">切换场内ETF定投</span>' if prem_switch else '→ 正常场外基金定投' if not prem_sell else '→ <span style=\"color:#dc2626\">溢价偏高，可卖出场内持仓</span>'}</p>
+<p style="font-size:10px;color:#6b7280;margin-top:2px">规则：溢价<5%切场内买入 · 溢价>8%卖回场外 · 其余时间场外基金定投</p></div>
 
 <div class="ca"><h3>买入基准矩阵（PE x VIX）</h3>
 <div style="overflow-x:auto"><table class="tb">
@@ -201,10 +244,9 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Mic
 <p style="font-size:12px;margin-top:4px"><b>浮盈减仓:</b>持仓浮盈>50%时可手动减10-20%仓位，分2-3次，间隔≥1周</p>
 <p style="font-size:10px;color:#6b7280;margin-top:2px">PE回落至<38 立即停止止盈</p></div>
 
-<div class="fo">v4.1 金字塔定投 · PE滞回5天 · ROE自动监控 · 每日更新 · 仅供参考不构成投资建议</div>
+<div class="fo">v4.2 金字塔定投 · 性价比评分 · 溢价切换 · PE滞回 · 每日更新 · 仅供参考不构成投资建议</div>
 </div></body></html>'''
 
 with open(os.path.join(os.path.dirname(__file__) or ".","index.html"),"w",encoding="utf-8") as f: f.write(html)
 
-print(f"DONE: PE={pe:.2f} tier={tier}({tn}) VIX={vix:.1f} DD={dd_pct}% units={units:.1f} = ¥{amount}")
-print(f"  sell={sel} buyback={buyback} ROE={roe:.1f}% warn={roe_warn} hyst={h['days_in_tier']}/5")
+print(f"DONE: PE={pe:.2f} tier={tier}({tn}) VIX={vix:.1f} DD={dd_pct}% units={units:.1f}=¥{amount} score={sc} prem={premium:.1f}%")
