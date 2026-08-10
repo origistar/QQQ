@@ -1,84 +1,105 @@
 <!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>纳指100 QQQ 定投决策 v4.1</title>
+<title>纳指100 定投决策 v5.1</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#f5f6f8;color:#1a1a2e;line-height:1.6}
 .c{max-width:720px;margin:0 auto;padding:20px 16px 40px}
-.h{text-align:center;padding:20px 0 8px}.h h1{font-size:22px;font-weight:700}
-.h .d{font-size:13px;color:#6b7280;margin-top:4px}
+.h{text-align:center;padding:20px 0 8px}.h h1{font-size:20px;font-weight:700}
+.h .d{font-size:12px;color:#6b7280;margin-top:4px}
 .r{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:12px}
-.cd{background:#fff;border-radius:12px;padding:14px 10px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04);border:1px solid #e5e7eb}
-.va{font-size:22px;font-weight:700;line-height:1.2}.lb{font-size:11px;color:#6b7280;margin-top:2px}
-.dc{background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;border-radius:14px;padding:20px;text-align:center;margin:16px 0}
-.dc .bg{font-size:34px;font-weight:800;line-height:1}.dc .sb{font-size:14px;opacity:.9;margin-top:6px}
+.r4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px}
+.cd{background:#fff;border-radius:12px;padding:12px 8px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04);border:1px solid #e5e7eb}
+.va{font-size:20px;font-weight:700;line-height:1.2}.lb{font-size:10px;color:#6b7280;margin-top:2px}
+.dc{background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;border-radius:14px;padding:18px;text-align:center;margin:14px 0}
+.dc .bg{font-size:30px;font-weight:800;line-height:1}.dc .sb{font-size:13px;opacity:.9;margin-top:4px}
 .ca{background:#fff;border-radius:12px;padding:14px;margin-bottom:12px;box-shadow:0 1px 3px rgba(0,0,0,.04);border:1px solid #e5e7eb}
 .ca h3{font-size:13px;margin-bottom:8px}
-.tb{width:100%;border-collapse:collapse;font-size:12px}
+.tb{width:100%;border-collapse:collapse;font-size:11px}
 .tb th{background:#1e293b;color:#fff;padding:5px 4px;text-align:center;font-weight:600;font-size:10px}
-.tb td{text-align:center;padding:5px 4px;border:1px solid #e5e7eb;font-weight:600;font-size:12px}
+.tb td{text-align:center;padding:5px 4px;border:1px solid #e5e7eb;font-weight:600;font-size:11px}
 .tb td.lb{background:#f1f5f9;text-align:left;padding-left:6px;font-size:10px}
 .tb td.hi{background:#fef3c7}.tb td.z{color:#cbd5e1}
-.ft{width:100%;border-collapse:collapse;font-size:12px}
-.ft th{background:#f1f5f9;padding:6px 8px;text-align:left;font-weight:600;font-size:11px;border-bottom:2px solid #e5e7eb}
-.ft td{padding:5px 8px;border-bottom:1px solid #e5e7eb;font-size:12px}
+.ft{width:100%;border-collapse:collapse;font-size:11px}
+.ft th{background:#f1f5f9;padding:5px 6px;text-align:left;font-weight:600;font-size:10px;border-bottom:2px solid #e5e7eb}
+.ft td{padding:4px 6px;border-bottom:1px solid #e5e7eb;font-size:11px}
 .fo{font-size:10px;color:#6b7280;text-align:center;border-top:1px solid #e5e7eb;padding-top:12px;margin-top:16px}
 .sell{border-color:#dc2626!important;background:#fef2f2!important}
+.ph{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700}
+.ph1{background:#f0fdf4;color:#16a34a}.ph2{background:#fefce8;color:#d97706}.ph3{background:#fef2f2;color:#dc2626}
 </style></head><body><div class="c">
-<div class="h"><h1>纳指100 定投决策 v4.2</h1><div class="d">更新: 2026-08-09 02:43 UTC | 性价比45分(中等) | PE滞回5天</div></div>
+<div class="h"><h1>纳指100 定投决策 v5.1</h1>
+<div class="d">更新: 2026-08-10 08:23 UTC · 数据正常 · 性价比44分(中等)</div></div>
 
 <div class="r">
-<div class="cd"><div class="va">31.36</div><div class="lb">PE-TTM <span style="font-size:10px;color:#d97706">[滞回: 4/5天]</span></div></div>
-<div class="cd"><div class="va">16.50</div><div class="lb">VIX 情绪</div></div>
-<div class="cd"><div class="va" style="color:#dc2626">-3.35%</div><div class="lb">回撤 (52周高)</div></div>
+<div class="cd"><div class="va">31.36</div><div class="lb">PE-TTM · 合理偏低</div></div>
+<div class="cd"><div class="va">15.47</div><div class="lb">VIX · 平稳</div></div>
+<div class="cd"><div class="va" style="color:#dc2626">-3.38%</div><div class="lb">回撤 距52周高</div></div>
 </div>
-
 <div class="r">
-<div class="cd"><div class="va">29,733</div><div class="lb">NDX 纳指100</div></div>
-<div class="cd"><div class="va">$723.85</div><div class="lb">QQQ 价格</div></div>
-<div class="cd"><div class="va">30.2%</div><div class="lb">ROE </div></div>
+<div class="cd"><div class="va">29,722</div><div class="lb">NDX</div></div>
+<div class="cd"><div class="va">30.2%</div><div class="lb">ROE</div></div>
+<div class="cd"><div class="va">13.0%</div><div class="lb">溢价率 513100</div></div>
 </div>
 
 <div class="dc">
-<div class="sb">今日定投</div>
+<div class="sb">今日定投 · <span class="ph ph①">日常期</span></div>
 <div class="bg">¥1,500 / 日</div>
-<div class="sb">PE=31.4(合理偏低) · VIX=16.5(平稳) · 回撤-3.4% · 基准1.5份x乘数1.0x=1.5份</div>
+<div class="sb">PE×VIX=1.5份 × DD×1.0 × ¥1000 = ¥1,500  </div>
 </div>
 
-<div class="ca" style="border-color:#d97706;background:#fff7ed;font-size:11px"><strong style="color:#d97706">🟠 浮盈提醒</strong>：定期检查持仓浮盈，若<strong>>50%</strong>，可考虑手动减仓10-20%，分2-3次执行（每次间隔≥1周）。</div>
 
-<div class="ca"><h3>📊 定投性价比评分 45 分（中等）</h3>
-<p style="font-size:11px;color:#6b7280">
-PE分位(52%) · 回撤(-3.4%) · VIX(16.5) · ROE(30%) · 均线偏离<br>
-71-100 性价比极高 · 41-70 中等 · 10-40 偏低
-</p></div>
 
-<div class="ca"><h3>💱 溢价率场内外切换 <span style="font-size:10px;background:#fef3c7;padding:1px 4px;border-radius:3px">NEW</span></h3>
-<p style="font-size:12px">当前溢价率 <b>13.0%</b> → <span style="color:#dc2626">溢价偏高，可卖出场内持仓</span></p>
-<p style="font-size:10px;color:#6b7280;margin-top:2px">规则：溢价<5%切场内买入 · 溢价>8%卖回场外 · 其余时间场外基金定投</p></div>
+<div class="ca"><h3>📊 近90天趋势</h3>
+<div style="height:200px"><canvas id="chart"></canvas></div></div>
 
-<div class="ca"><h3>买入基准矩阵（PE x VIX）</h3>
+<div class="ca"><h3>💱 溢价切换</h3><p style="font-size:12px">溢价率 <b>13.0% > 8%</b> → <span style="color:#dc2626">分批次卖出场内持仓，切换回场外（需有场外额度）</span></p></div>
+
+<div class="ca"><h3>PE × VIX 基准矩阵</h3>
 <div style="overflow-x:auto"><table class="tb">
-<tr><th>PE 分档</th><th>贪婪 &lt;13</th><th>平稳 13-18</th><th>恐慌 18-30</th><th>极恐 &gt;30</th></tr>
-<tr><td class="lb">PE &lt; 28（低估）</td><td>1.0</td><td>2.0</td><td>3.0</td><td>4.0</td></tr>
-<tr><td class="lb">PE 28-33（合理偏低）</td><td>0.5</td><td class="hi">1.5</td><td>2.0</td><td>3.0</td></tr>
-<tr><td class="lb">PE 33-36（合理）</td><td>0.5</td><td>1.0</td><td>1.5</td><td>2.0</td></tr>
-<tr><td class="lb">PE 36-38（偏高）</td><td class="z">0.0</td><td>0.5</td><td>1.0</td><td>1.5</td></tr>
-<tr><td class="lb">PE > 38（高估/止盈）</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr>
-</table></div></div>
+<tr><th>PE</th><th>贪婪&lt;13</th><th>平稳13-18</th><th>恐慌18-30</th><th>极恐>30</th></tr>
+<tr><td class="lb">PE<28</td><td>1.0</td><td>2.0</td><td>3.0</td><td>4.0</td></tr>
+<tr><td class="lb">28~33</td><td>0.5</td><td class="hi">1.5</td><td>2.0</td><td>3.0</td></tr>
+<tr><td class="lb">33~36</td><td>0.5</td><td>1.0</td><td>1.5</td><td>2.0</td></tr>
+<tr><td class="lb">36~38</td><td class="z">0.0</td><td>0.5</td><td>1.0</td><td>1.5</td></tr>
+<tr><td class="lb">>38</td><td>0</td><td>0</td><td>0</td><td>0</td></tr></table></div></div>
 
-<div class="ca"><h3>回撤折扣乘数</h3>
+<div class="ca"><h3>DD 回撤乘数 · 三阶段</h3>
 <table class="ft">
-<tr><th>回撤</th><th>&lt;6%</th><th>6-10%</th><th>10-15%</th><th>15-20%</th><th>20-25%</th><th>25-30%</th><th>&gt;30%</th></tr>
-<tr><td style="font-weight:600">乘数</td>
-<td style="background:#fef3c7">x1.0</td><td>x1.5</td><td>x2.0</td><td>x3.0</td><td>x3.0</td><td>x4.0</td><td>x5.0</td></tr>
-</table></div>
+<tr><th>DD</th><th>&lt;6%</th><th>6-10%</th><th>10-15%</th><th>15-20%</th><th>20-25%</th><th>25-30%</th><th>>30%</th></tr>
+<tr><td style="font-weight:600">日常</td><td style="background:#fef3c7">×1.0</td><td>×1.5</td><td>×2.0</td><td>×3.0</td><td>暂停</td><td>暂停</td><td>暂停</td></tr>
+<tr><td style="font-weight:600">熊市</td><td>—</td><td>—</td><td>—</td><td>—</td><td>×4.0</td><td>×5.0</td><td>×6.0</td></tr>
+</table>
+<p style="font-size:10px;color:#6b7280;margin-top:4px">DD<20%：日常池 · DD≥20%≤1月：反转窗口双池齐发 · DD≥20%>1月：长熊期熊市池独立运作</p></div>
 
-<div class="ca"><h3>止盈与买回规则</h3>
-<p style="font-size:12px"><b>卖出：</b>PE>38且VIX<18 → 一档，每周卖3%，10周卖完30%<br>PE>40或PE>38且VIX<13 → 二档，每周卖6-8%，4-5周卖完</p>
-<p style="font-size:12px;margin-top:4px"><b>买回:</b>PE<32或PE<28或DD>15% → 买回QQQ</p>
-<p style="font-size:12px;margin-top:4px"><b>浮盈减仓:</b>持仓浮盈>50%时可手动减10-20%仓位，分2-3次，间隔≥1周</p>
-<p style="font-size:10px;color:#6b7280;margin-top:2px">PE回落至<38 立即停止止盈</p></div>
+<div class="ca"><h3>🎯 性价比评分 44分（中等）</h3>
+<p style="font-size:11px;color:#6b7280">PE分位(52%)×35% · DD(-3.4%)×25% · VIX(15.5)×20% · ROE(30%)×10% · 均线×10%<br>71-100 极高 · 41-70 中等 · 10-40 偏低</p></div>
 
-<div class="fo">v4.2 金字塔定投 · 性价比评分 · 溢价切换 · PE滞回 · 每日更新 · 仅供参考不构成投资建议</div>
-</div></body></html>
+<div class="ca"><h3>止盈规则</h3>
+<p style="font-size:11px"><b>PE>38</b> 且 VIX<18 → 每周卖3%，10周30%<br><b>PE>38</b> 且 VIX<13 → 每周卖6-8%，4-5周<br><b>PE>33 且浮盈>50%</b> → 卖出20%，分2-3次<br>PE回落<38 立即停止 | 买回: PE<32 或 DD>15%</p></div>
+
+<div class="fo">v5.1 金字塔定投 · 三阶段DD · 溢价切换 · 每日更新 · 仅供参考不构成投资建议</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<script>
+const ctx=document.getElementById('chart').getContext('2d');
+new Chart(ctx,{
+type:'line',
+data:{
+labels:["08-10"],
+datasets:[
+{label:'NDX',data:[29722],borderColor:'#2563eb',yAxisID:'y',tension:0.2,pointRadius:0},
+{label:'评分',data:[44],borderColor:'#f59e0b',yAxisID:'y1',tension:0.2,pointRadius:0,borderDash:[3,3]}
+]},
+options:{
+responsive:true,maintainAspectRatio:false,
+plugins:{legend:{position:'top',labels:{font:{size:10}}}},
+scales:{
+y:{type:'linear',position:'left',grid:{display:false},ticks:{font:{size:9}}},
+y1:{type:'linear',position:'right',min:0,max:100,grid:{display:false},ticks:{font:{size:9}}}
+}
+}
+});
+</script>
+</body></html>

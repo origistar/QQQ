@@ -4,5 +4,21 @@
   "sell_started": null,
   "sell_week": 0,
   "has_sold": false,
-  "last_effective_tier": "mid_low"
+  "last_effective_tier": "mid_low",
+  "bear_start_date": null,
+  "history": [
+    {
+      "date": "2026-08-10",
+      "pe": 31.36,
+      "pe_pct": 52.4,
+      "vix": 15.47,
+      "ndx": 29722,
+      "dd_pct": -3.38,
+      "tier": "mid_low",
+      "phase": "①",
+      "score": 44,
+      "daily": 1500,
+      "premium": 13.0
+    }
+  ]
 }
