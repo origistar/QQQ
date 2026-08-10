@@ -145,6 +145,8 @@ elif pe < 38 and state.get("sell_active"):
 
 # ===== 8. HISTORY =====
 history = state.get("history", [])
+# Deduplicate: remove existing entry for today if any
+history = [h for h in history if h.get("date") != today_str]
 history.append({
     "date": today_str,
     "pe": pe, "pe_pct": pe_pct, "vix": vix, "ndx": ndx,
