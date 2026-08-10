@@ -11,12 +11,12 @@
       "date": "2026-08-10",
       "pe": 31.36,
       "pe_pct": 52.4,
-      "vix": 15.47,
-      "ndx": 29722,
-      "dd_pct": -3.38,
+      "vix": 15.12,
+      "ndx": 29710,
+      "dd_pct": -3.42,
       "tier": "mid_low",
       "phase": "①",
-      "score": 44,
+      "score": 43,
       "daily": 1500,
       "premium": 13.0
     }
