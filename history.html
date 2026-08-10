@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>纳指定投 v5.1 · 历史数据</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#f5f6f8;color:#1a1a2e;line-height:1.6}
+.c{max-width:900px;margin:0 auto;padding:20px 16px 40px}
+h1{font-size:18px;text-align:center;margin-bottom:4px}
+.sub{font-size:12px;color:#6b7280;text-align:center;margin-bottom:16px}
+.nav{display:flex;gap:10px;justify-content:center;margin-bottom:20px}
+.nav a{color:#2563eb;text-decoration:none;font-size:13px;padding:4px 12px;border:1px solid #2563eb;border-radius:6px}
+.nav a.active{background:#2563eb;color:#fff}
+.btn{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.btn button,.btn select{padding:6px 12px;border:1px solid #e5e7eb;border-radius:6px;background:#fff;font-size:12px;cursor:pointer}
+.btn button:hover{background:#f3f4f6}
+table{width:100%;border-collapse:collapse;font-size:11px;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+th{background:#1e293b;color:#fff;padding:7px 6px;text-align:center;font-weight:600;font-size:10px;position:sticky;top:0;z-index:1}
+td{padding:5px 6px;border-bottom:1px solid #e5e7eb;text-align:center;font-size:10px}
+tr:hover{background:#f8fafc}
+.fo{font-size:10px;color:#6b7280;text-align:center;margin-top:16px;padding-top:12px;border-top:1px solid #e5e7eb}
+.stat{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px}
+.sc{background:#fff;border-radius:10px;padding:10px;text-align:center;border:1px solid #e5e7eb}
+.sc .v{font-size:18px;font-weight:700}.sc .l{font-size:10px;color:#6b7280;margin-top:2px}
+</style></head><body><div class="c">
+<h1>纳指定投 v5.1 · 历史数据</h1>
+<div class="sub">数据每日自动更新 · 来源: 蛋卷PE + yfinance VIX/NDX</div>
+<div class="nav">
+<a href="index.html">← 返回决策面板</a>
+<a href="history.html" class="active">历史数据</a>
+</div>
+
+<div class="btn">
+<button onclick="loadRange(30)">近30天</button>
+<button onclick="loadRange(90)">近90天</button>
+<button onclick="loadRange(180)">近半年</button>
+<button onclick="loadRange(365)">全部</button>
+</div>
+
+<div id="stats" class="stat"></div>
+<div style="overflow-x:auto"><table>
+<thead><tr><th>日期</th><th>PE</th><th>PE分位</th><th>VIX</th><th>NDX</th><th>DD%</th><th>PE档</th><th>阶段</th><th>评分</th><th>日投</th><th>溢价</th></tr></thead>
+<tbody id="tbody"></tbody>
+</table></div>
+<div class="fo">v5.1 历史数据 · auto-updated daily · 仅供参考不构成投资建议</div>
+</div>
+
+<script>
+async function loadRange(n){
+  try{
+    const r=await fetch('state.json?'+Date.now());
+    const d=await r.json();
+    const h=d.history||[];
+    const rows=h.slice(-n).reverse();
+    
+    // Stats
+    if(rows.length>0){
+      const ndxs=rows.map(r=>r.ndx).filter(Boolean);
+      const scores=rows.map(r=>r.score).filter(Boolean);
+      const dailys=rows.map(r=>r.daily).filter(Boolean);
+      const ndxChg=ndxs.length>1?((ndxs[0]-ndxs[ndxs.length-1])/ndxs[ndxs.length-1]*100).toFixed(1):'—';
+      document.getElementById('stats').innerHTML=
+        `<div class="sc"><div class="v">${rows.length}</div><div class="l">数据天数</div></div>
+         <div class="sc"><div class="v">${ndxs[0]?.toLocaleString()||'—'}</div><div class="l">最新NDX</div></div>
+         <div class="sc"><div class="v">${ndxChg}%</div><div class="l">区间涨跌</div></div>
+         <div class="sc"><div class="v">${scores.length?(scores.reduce((a,b)=>a+b,0)/scores.length).toFixed(0):'—'}</div><div class="l">平均评分</div></div>`;
+    }
+    
+    document.getElementById('tbody').innerHTML=rows.map(r=>{
+      const ddC=r.dd_pct<-5?'color:#dc2626;font-weight:700':'color:#16a34a';
+      const phC=r.phase==='①'?'#f0fdf4':r.phase==='②'?'#fefce8':'#fef2f2';
+      return `<tr>
+        <td>${r.date}</td>
+        <td>${r.pe}</td><td>${r.pe_pct}%</td><td>${r.vix}</td>
+        <td>${(r.ndx||'').toLocaleString()}</td><td style="${ddC}">${r.dd_pct}%</td>
+        <td>${r.tier||'—'}</td>
+        <td style="background:${phC}">${r.phase||'—'}</td>
+        <td style="font-weight:700">${r.score}</td>
+        <td style="font-weight:700">${r.daily>0?'¥'+r.daily.toLocaleString():'—'}</td>
+        <td>${r.premium}%</td>
+      </tr>`;
+    }).join('');
+  }catch(e){document.getElementById('tbody').innerHTML='<tr><td colspan="11">加载失败，请确认 state.json 存在</td></tr>';}
+}
+loadRange(30);
+</script>
+</body></html>
