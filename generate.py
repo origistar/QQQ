@@ -14,27 +14,31 @@ def save_json(path, data):
     with open(path, "w", encoding="utf-8") as f: json.dump(data, f, ensure_ascii=False, indent=2)
 
 state = load_json(STATE_FILE, {"sell_active":False,"sell_tier":None,"sell_started":None,
-    "sell_week":0,"has_sold":False,"history":[],"bear_start_date":None})
+    "sell_week":0,"has_sold":False,"history":[],"bear_start_date":None,"last_data_hash":""})
 
-# ===== 1. DATA FETCH =====
+# ===== 1. DATA FETCH (with freshness check) =====
 pe, pe_pct, roe = 31.66, 53.4, 29.98
-pe_err = False
+pe_err = False; pe_fresh = False
 try:
     req = urllib.request.Request("https://danjuanfunds.com/djapi/index_eva/dj")
     req.add_header("User-Agent","Mozilla/5.0")
+    with urllib.request.urlopen(req,timeout=15) as resp:
+        for item in json.loads(resp.read())["data"]["items"]:
+            if item.get("index_code")=="NDX": pe=round(item["pe"],2); pe_pct=round(item["pe_percentile"]*100,1); roe=round(item["roe"]*100,1); pe_fresh=True
     with urllib.request.urlopen(req,timeout=15) as resp:
         for item in json.loads(resp.read())["data"]["items"]:
             if item.get("index_code")=="NDX": pe=round(item["pe"],2); pe_pct=round(item["pe_percentile"]*100,1); roe=round(item["roe"]*100,1)
 except Exception as e: pe_err = True; print(f"[WARN] PE fetch: {e}",file=sys.stderr)
 
 vix, ndx, ndx52 = 16.50, 29733, 30762
-yf_err = False
+yf_err = False; yf_fresh = False
 try:
     import yfinance as yf
     vix_d = yf.Ticker("^VIX").info; ndx_d = yf.Ticker("^NDX").info
     vix = round(vix_d.get("regularMarketPrice", 16.50), 2)
     ndx = int(ndx_d.get("regularMarketPrice", 29733))
     ndx52 = int(ndx_d.get("fiftyTwoWeekHigh", 30762))
+    yf_fresh = True
 except Exception as e: yf_err = True; print(f"[WARN] yfinance: {e}",file=sys.stderr)
 
 dd_pct = round((ndx - ndx52) / ndx52 * 100, 2)
@@ -158,12 +162,20 @@ if len(history) > 365: history = history[-365:]
 state["history"] = history
 save_json(STATE_FILE, state)
 
-# ===== 9. HTML =====
-ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+# ===== 9. DATA FRESHNESS CHECK =====
+data_hash = f"{pe:.2f}|{vix:.2f}|{ndx}"
 data_status = []
-if pe_err: data_status.append("⚠ PE数据获取失败，使用缓存")
-if yf_err: data_status.append("⚠ VIX/NDX获取失败，使用缓存")
+if not pe_fresh: data_status.append("⚠ PE数据获取失败，可能被防火墙拦截")
+if not yf_fresh: data_status.append("⚠ VIX/NDX获取失败")
+# Check if data is stale (same hash as last run + data fetch failed)
+if not pe_fresh and not yf_fresh:
+    sys.exit(1)  # Hard fail - don't push stale data
 status_note = " · ".join(data_status) if data_status else "数据正常"
+state["last_data_hash"] = data_hash
+save_json(STATE_FILE, state)
+
+# ===== 10. HTML =====
+ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
 def h(t,c): return ' class="hi"' if t==tier and c==col else ""
 def z(v): return ' class="z"' if v==0 else ""
