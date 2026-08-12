@@ -44,16 +44,22 @@ except Exception as e: yf_err = True; print(f"[WARN] yfinance: {e}",file=sys.std
 dd_pct = round((ndx - ndx52) / ndx52 * 100, 2)
 dd_abs = abs((ndx - ndx52) / ndx52)
 
-# Premium (jisilu)
-premium = 13.0
+# ===== PREMIUM: 513100市价/净值（天天基金+yfinance） =====
+premium = None; prem_fresh = False
 try:
-    req = urllib.request.Request("https://www.jisilu.cn/data/qdii/detail/513100")
-    req.add_header("User-Agent","Mozilla/5.0")
-    with urllib.request.urlopen(req,timeout=10) as resp:
-        import re
-        m = re.search(r'(\d+\.\d+)%', resp.read().decode())
-        if m: premium = float(m.group(1))
-except: pass
+    req_p = urllib.request.Request("https://api.fund.eastmoney.com/f10/lsjz?fundCode=513100&pageIndex=1&pageSize=1")
+    req_p.add_header("Referer","https://fundf10.eastmoney.com/")
+    with urllib.request.urlopen(req_p,timeout=10) as resp:
+        nav_d = json.loads(resp.read())
+        nav_val = float(nav_d["Data"]["LSJZList"][0]["DWJZ"])
+    etf_p = yf.Ticker("513100.SS").info.get("regularMarketPrice")
+    if not etf_p: etf_p = yf.Ticker("513100.SS").info.get("previousClose")
+    if nav_val and etf_p:
+        premium = round((etf_p / nav_val - 1) * 100, 1)
+        prem_fresh = True
+except Exception as e:
+    print(f"[WARN] Premium: {e}",file=sys.stderr)
+if premium is None: premium = "?"
 
 # ===== 2. TIER CALC (no hysteresis in v5.1) =====
 raw_tier = "low" if pe<28 else "mid_low" if pe<=33 else "mid" if pe<=36 else "high" if pe<=38 else "sell"
@@ -155,7 +161,7 @@ history.append({
     "date": today_str,
     "pe": pe, "pe_pct": pe_pct, "vix": vix, "ndx": ndx,
     "dd_pct": round(dd_pct, 2), "tier": tier, "phase": phase_label,
-    "score": sc, "daily": daily_amount, "premium": round(premium, 1)
+    "score": sc, "daily": daily_amount, "premium": premium if isinstance(premium, (int,float)) else None,
 })
 # Keep last 365 days
 if len(history) > 365: history = history[-365:]
@@ -181,8 +187,9 @@ def h(t,c): return ' class="hi"' if t==tier and c==col else ""
 def z(v): return ' class="z"' if v==0 else ""
 def hm(m): return ' style="background:#fef3c7"' if abs(m-dd_mult)<0.01 else ""
 
-prem_switch = premium < 5
-prem_sell = premium > 8
+prem_switch = isinstance(premium, (int,float)) and premium < 5
+prem_sell = isinstance(premium, (int,float)) and premium > 8
+prem_display = f"{premium:.1f}%" if isinstance(premium, (int,float)) else "N/A"
 
 # History chart data (last 90 days)
 hist_ndx = [h["ndx"] for h in history[-90:]]
@@ -196,7 +203,9 @@ if state["sell_active"]:
     sell_html = f'<div class="ca sell"><strong style="color:#dc2626">⚠ 止盈进行中（第{sw}/{mw}周）</strong><p style="font-size:12px;margin-top:4px">PE={pe:.1f}>38 · 每周卖<b>{wp}%</b> · 累计约<b>{sw*wp}%</b></p></div>'
 
 prem_html = ""
-if prem_switch:
+if not isinstance(premium, (int,float)):
+    prem_html = f'<div class="ca"><h3>💱 溢价切换</h3><p style="font-size:12px;color:#6b7280">溢价率数据暂不可用，请手动查看雪球</p></div>'
+elif prem_switch:
     prem_html = f'<div class="ca"><h3>💱 溢价切换</h3><p style="font-size:12px">溢价率 <b>{premium:.1f}% < 5%</b> → <span style="color:#16a34a">切换场内ETF买入 · 分批次转存量场外到场内</span></p></div>'
 elif prem_sell:
     prem_html = f'<div class="ca"><h3>💱 溢价切换</h3><p style="font-size:12px">溢价率 <b>{premium:.1f}% > 8%</b> → <span style="color:#dc2626">分批次卖出场内持仓，切换回场外（需有场外额度）</span></p></div>'
@@ -246,7 +255,7 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Mic
 <div class="r">
 <div class="cd"><div class="va">{ndx:,}</div><div class="lb">NDX</div></div>
 <div class="cd"><div class="va">{roe:.1f}%</div><div class="lb">ROE</div></div>
-<div class="cd"><div class="va">{premium:.1f}%</div><div class="lb">溢价率 513100</div></div>
+<div class="cd"><div class="va">{prem_display}</div><div class="lb">溢价率 513100</div></div>
 </div>
 
 <div class="dc">
