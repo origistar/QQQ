@@ -452,9 +452,9 @@ td.high{{background:#fff7ed;color:#d97706;font-weight:700}}
 </div>
 
 <div class="dc">
-<div class="sb">AHR999 · {ahr_tier}</div>
-<div class="bg">{ahr999:.4f}</div>
-<div class="sb">价格/200MA={btc_price/btc_ma200:.2f} · {'BTC<$50K ¥12,000' if btc_below_50k else 'AHR999<0.45 ¥6,000'}</div>
+<div class="sb">今日定投 · {ahr_tier}</div>
+<div class="bg">¥{btc_weekly:,} / 周</div>
+<div class="sb">AHR999={ahr999:.4f} · 价格/200MA={btc_price/btc_ma200:.2f} {'· BTC<$50K 应急加速' if btc_below_50k else ''}</div>
 </div>
 
 <div class="ca"><h3>定投规则</h3>
