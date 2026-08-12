@@ -323,4 +323,200 @@ y1:{{type:'linear',position:'right',min:0,max:100,grid:{{display:false}},ticks:{
 with open(os.path.join(BASE_DIR, "index.html"), "w", encoding="utf-8") as f:
     f.write(html)
 
-print(f"v5.1 DONE: PE={pe:.2f}({tn}) VIX={vix:.1f} DD={dd_pct}% phase={phase} daily=¥{daily_amount} score={sc}")
+# ==========================================
+# BTC AHR999 定投页面
+# ==========================================
+btc_err = False
+try:
+    btc_t = yf.Ticker("BTC-USD")
+    btc_info = btc_t.info
+    btc_price = int(btc_info.get("regularMarketPrice", 63500))
+    btc_52h = int(btc_info.get("fiftyTwoWeekHigh", 126000))
+    btc_dd = round((btc_price - btc_52h) / btc_52h * 100, 1)
+
+    ibit_t = yf.Ticker("IBIT")
+    ibit_price = round(ibit_t.info.get("regularMarketPrice", 36.8), 2)
+
+    # MSTR
+    mstr_t = yf.Ticker("MSTR")
+    mstr_info = mstr_t.info
+    mstr_price = round(mstr_info.get("regularMarketPrice", 96), 2)
+    mstr_52h = int(mstr_info.get("fiftyTwoWeekHigh", 399))
+    mstr_dd = round((mstr_price - mstr_52h) / mstr_52h * 100, 1)
+    mstr_mcap = mstr_info.get("marketCap", 37e9)
+    btc_held = 578000
+    mnav = round(mstr_mcap / (btc_held * btc_price), 2) if btc_price else 1.0
+
+    # AHR999: 200MA + index growth
+    btc_hist = btc_t.history(period="250d")
+    btc_prices = btc_hist["Close"].tolist()
+    if len(btc_prices) >= 200:
+        btc_ma200 = sum(btc_prices[-200:]) / 200
+    else:
+        btc_ma200 = btc_price * 0.95
+    genesis = date(2009, 1, 3)
+    days_b = (date.today() - genesis).days
+    growth_val = 10 ** (5.84 * __import__("math").log10(days_b) - 17.01)
+    ahr999 = round((btc_price / btc_ma200) * (btc_price / growth_val), 4)
+    ahr999_raw = ahr999
+except Exception as e:
+    btc_err = True
+    btc_price = 63500; btc_52h = 126000; btc_dd = -49.6
+    ibit_price = 36.8
+    mstr_price = 96; mstr_52h = 399; mstr_dd = -75.9; mnav = 1.0
+    btc_ma200 = 69000; ahr999 = 0.34
+
+# DCA rules
+btc_below_50k = btc_price < 50000
+if btc_below_50k:
+    btc_weekly = 12000; btc_shares = round(12000 / 7.25 / ibit_price)
+    btc_active = "应急加速"
+elif ahr999 < 0.45:
+    btc_weekly = 6000; btc_shares = round(6000 / 7.25 / ibit_price)
+    btc_active = "抄底"
+elif ahr999 <= 1.2:
+    btc_weekly = 3000; btc_shares = round(3000 / 7.25 / ibit_price)
+    btc_active = "定投"
+else:
+    btc_weekly = 0; btc_shares = 0
+    btc_active = "暂停"
+
+btc_ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+btc_status = "⚠ 数据获取异常" if btc_err else "数据正常"
+
+# Save BTC state
+BTC_STATE = os.path.join(BASE_DIR, "btc_state.json")
+btc_history = load_json(BTC_STATE, {"history": []}).get("history", [])
+btc_history = [h for h in btc_history if h.get("date") != today_str]
+btc_history.append({
+    "date": today_str,
+    "btc": btc_price, "ibtc": ibit_price, "ahr999": ahr999_raw if not btc_err else None,
+    "mstr": mstr_price, "mnav": mnav, "weekly": btc_weekly
+})
+if len(btc_history) > 365: btc_history = btc_history[-365:]
+save_json(BTC_STATE, {"history": btc_history})
+
+ahr_tier = "🔴 < 0.45" if ahr999 < 0.45 else "🟢 0.45-1.2" if ahr999 <= 1.2 else "🟡 > 1.2"
+
+btc_html = f'''<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>比特币 AHR999 定投决策</title>
+<style>
+*{{margin:0;padding:0;box-sizing:border-box}}
+body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#f5f6f8;color:#1a1a2e;line-height:1.6}}
+.c{{max-width:660px;margin:0 auto;padding:20px 16px 40px}}
+.h{{text-align:center;padding:20px 0 8px}}.h h1{{font-size:20px;font-weight:700}}
+.h .d{{font-size:12px;color:#6b7280;margin-top:4px}}
+.r{{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:12px}}
+.cd{{background:#fff;border-radius:12px;padding:12px 8px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04);border:1px solid #e5e7eb}}
+.va{{font-size:20px;font-weight:700;line-height:1.2}}.lb{{font-size:10px;color:#6b7280;margin-top:2px}}
+.dc{{background:linear-gradient(135deg,#d97706,#ea580c);color:#fff;border-radius:14px;padding:18px;text-align:center;margin:14px 0}}
+.dc .bg{{font-size:30px;font-weight:800;line-height:1}}.dc .sb{{font-size:13px;opacity:.9;margin-top:4px}}
+.ca{{background:#fff;border-radius:12px;padding:14px;margin-bottom:12px;box-shadow:0 1px 3px rgba(0,0,0,.04);border:1px solid #e5e7eb}}
+.ca h3{{font-size:13px;margin-bottom:8px}}
+table{{width:100%;border-collapse:collapse;font-size:11px}}
+th{{background:#1e293b;color:#fff;padding:5px 6px;text-align:center;font-weight:600;font-size:10px}}
+td{{padding:5px 6px;border-bottom:1px solid #e5e7eb;text-align:center;font-size:11px}}
+td.lb{{background:#f8fafc;text-align:left;font-weight:600;font-size:10px}}
+td.deep{{background:#fef2f2;color:#dc2626;font-weight:700}}
+td.normal{{background:#f0fdf4;color:#16a34a;font-weight:700}}
+td.high{{background:#fff7ed;color:#d97706;font-weight:700}}
+.fo{{font-size:10px;color:#6b7280;text-align:center;border-top:1px solid #e5e7eb;padding-top:12px;margin-top:16px}}
+.grid2{{display:grid;grid-template-columns:1fr 1fr;gap:10px}}
+.chart-box{{height:220px}}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+</head><body><div class="c">
+<div class="h"><h1>比特币 AHR999 定投决策</h1>
+<div class="d">更新: {btc_ts} · 数据源: yfinance · AHR999 自算</div></div>
+
+<div class="r">
+<div class="cd"><div class="va">${btc_price:,}</div><div class="lb">BTC 价格</div></div>
+<div class="cd"><div class="va">${ibit_price:.2f}</div><div class="lb">IBIT 每股</div></div>
+<div class="cd"><div class="va" style="color:#dc2626">{btc_dd:+.1f}%</div><div class="lb">回撤 52周高 ${btc_52h:,}</div></div>
+</div>
+<div class="r">
+<div class="cd"><div class="va">${btc_ma200:,.0f}</div><div class="lb">200日定投均线</div></div>
+<div class="cd"><div class="va" style="color:#dc2626">${mstr_price:.2f} ({mstr_dd:+.1f}%)</div><div class="lb">MSTR · 52周高 ${mstr_52h}</div></div>
+<div class="cd"><div class="va" style="color:{'#16a34a' if mnav>=1 else '#dc2626'}">{mnav:.2f}x {'溢价' if mnav>=1 else '折价'}</div><div class="lb">MSTR mNAV · 持有578K BTC</div></div>
+</div>
+
+<div class="dc">
+<div class="sb">AHR999 · {ahr_tier}</div>
+<div class="bg">{ahr999:.4f}</div>
+<div class="sb">价格/200MA={btc_price/btc_ma200:.2f} · {'BTC<$50K ¥12,000' if btc_below_50k else 'AHR999<0.45 ¥6,000'}</div>
+</div>
+
+<div class="ca"><h3>定投规则</h3>
+<table>
+<tr><th>条件</th><th>区间</th><th>周投金额</th><th>IBIT 股数</th><th>状态</th></tr>
+<tr><td style="color:#dc2626"><b>BTC < $50,000</b></td><td style="color:#dc2626">应急加速</td><td style="color:#dc2626"><b>¥12,000</b></td><td>~{round(12000/7.25/ibit_price)} 股</td><td>{'← 现在' if btc_below_50k else '未触发'}</td></tr>
+<tr><td class="deep"><b>{ahr999:.4f}</b></td><td class="deep">< 0.45 抄底</td><td class="deep">¥6,000</td><td>~{round(6000/7.25/ibit_price)} 股</td><td>{'← 现在' if not btc_below_50k and ahr999<0.45 else ''}</td></tr>
+<tr><td class="normal">0.45 ~ 1.2</td><td class="normal">定投区间</td><td class="normal">¥3,000</td><td>~{round(3000/7.25/ibit_price)} 股</td><td>{'← 现在' if 0.45<=ahr999<=1.2 else ''}</td></tr>
+<tr><td class="high">> 1.2</td><td class="high">高估暂停</td><td class="high">¥0</td><td>0</td><td>{'← 现在' if ahr999>1.2 else ''}</td></tr>
+</table>
+</div>
+
+<div class="ca"><h3>四年减半周期 · 底部预判</h3>
+<div class="chart-box" id="cycle-chart"></div>
+<table>
+<tr><th>周期</th><th>减半</th><th>牛市顶</th><th>顶→底</th><th>熊市底</th><th>回撤</th><th>减半→底</th></tr>
+<tr style="background:#fef2f2"><td><b>2024（本轮）</b></td><td><b>24.04</b></td><td><b>$126,000</b><br>25.10</td><td>已过 10 月<br>剩 ~2 月</td><td><b>$45-65K</b><br>预测 26.09-10</td><td>~-50%</td><td><b>28/30 月</b><br>剩 1-2 月</td></tr>
+<tr><td>2020</td><td>20.05</td><td>$69,000 · 21.11</td><td>12 个月</td><td>$15,500 · 22.11</td><td class="deep">-77%</td><td>30 个月</td></tr>
+<tr><td>2016</td><td>16.07</td><td>$19,700 · 17.12</td><td>12 个月</td><td>$3,150 · 18.12</td><td class="deep">-84%</td><td>29 个月</td></tr>
+<tr><td>2012</td><td>12.11</td><td>$1,150 · 13.12</td><td>13 个月</td><td>$150 · 15.01</td><td class="deep">-87%</td><td>25 个月</td></tr>
+</table>
+<p style="font-size:10px;color:#6b7280;margin-top:6px">
+两条独立线索同时指向 2026 年 9-10 月：<br>
+① <b>顶→底</b>：历次牛市见顶后 12-13 个月触底，本轮顶在 25.10，+12 个月 = <b>26.10</b><br>
+② <b>减半→底</b>：历次减半后 25-30 个月触底，当前第 28 个月，历史最长 30 个月 = <b>26.10</b>
+</p></div>
+
+<div class="grid2">
+<div class="ca"><h3>本周操作</h3>
+<p style="font-size:20px;font-weight:800;color:#dc2626">¥{btc_weekly:,} / 周</p>
+<p style="font-size:12px">IBIT ${ibit_price:.2f} × {btc_shares} 股</p>
+<p style="font-size:11px;color:#6b7280;margin-top:4px">{"BTC < $50K 应急加速" if btc_below_50k else "AHR999 " + str(ahr999) + " < 0.45" if ahr999 < 0.45 else "正常定投"}</p>
+</div>
+<div class="ca"><h3>退出条件</h3>
+<p style="font-size:12px"><b>AHR999 > 2.0</b>：分4周清仓</p>
+<p style="font-size:12px;margin-top:4px">止盈资金暂存，等 AHR999 < 1.2 时重新启动</p>
+<p style="font-size:11px;color:#6b7280;margin-top:4px">¥200,000 总额 · 投完即止</p>
+</div>
+</div>
+
+<div class="fo">AHR999 自算 · yfinance 数据 · ¥200,000 · 仅供参考不构成投资建议</div>
+</div>
+
+<script>
+var c=echarts.init(document.getElementById('cycle-chart'));
+c.setOption({{
+title:{{text:'BTC 减半周期 · 价格走势（对数）',left:'center',textStyle:{{fontSize:11}}}},
+tooltip:{{trigger:'axis',formatter:function(p){{return p[0].name+'<br>BTC: $'+p[0].data.toLocaleString()}}}},
+grid:{{left:50,right:20,top:35,bottom:30}},
+xAxis:{{type:'category',data:['2011','2012','2013','2014','2015','2016','2017','2018','2019','2020','2021','2022','2023','2024','2025','2026(预测)'],axisLabel:{{fontSize:9,interval:1}}}},
+yAxis:{{type:'log',min:100,axisLabel:{{fontSize:9,formatter:'${{value}}'}},splitLine:{{lineStyle:{{color:'#e5e7eb'}}}}}},
+series:[{{
+type:'line',data:[5,13,1150,200,450,750,19700,3150,11000,29000,69000,15500,44000,70000,126000,{btc_price}],
+smooth:true,lineStyle:{{color:'#d97706',width:2}},itemStyle:{{color:'#d97706'}},
+markLine:{{silent:true,symbol:'none',label:{{fontSize:9,position:'start'}},
+data:[
+{{name:'减半🔽',xAxis:'2012',lineStyle:{{color:'#dc2626',type:'dashed'}}}},
+{{name:'减半🔽',xAxis:'2016',lineStyle:{{color:'#dc2626',type:'dashed'}}}},
+{{name:'减半🔽',xAxis:'2020',lineStyle:{{color:'#dc2626',type:'dashed'}}}},
+{{name:'减半🔽(24.04)',xAxis:'2024',lineStyle:{{color:'#dc2626',type:'dashed'}}}}
+]}}, markArea:{{silent:true,label:{{fontSize:9}},data:[[
+{{xAxis:'2026(预测)',itemStyle:{{color:'rgba(220,38,38,0.08)'}}}},{{itemStyle:{{color:'rgba(220,38,38,0.01)'}}}}
+]]}}
+}},{{
+type:'line',data:[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,52000],
+lineStyle:{{color:'#dc2626',type:'dotted',width:1}},itemStyle:{{color:'#dc2626'}},showSymbol:false
+}}]
+}});
+</script>
+</body></html>'''
+
+with open(os.path.join(BASE_DIR, "btc.html"), "w", encoding="utf-8") as f:
+    f.write(btc_html)
+
+print(f"v5.1 DONE: PE={pe:.2f}({tn}) VIX={vix:.1f} DD={dd_pct}% phase={phase} daily=¥{daily_amount} score={sc} | BTC=${btc_price} AHR={ahr999:.4f} wk=¥{btc_weekly}")
