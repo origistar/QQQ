@@ -244,7 +244,10 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Mic
 .sell{{border-color:#dc2626!important;background:#fef2f2!important}}
 .ph{{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700}}
 .ph1{{background:#f0fdf4;color:#16a34a}}.ph2{{background:#fefce8;color:#d97706}}.ph3{{background:#fef2f2;color:#dc2626}}
-</style></head><body><div class="c">
+.nav{{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #e5e7eb;display:flex;justify-content:space-around;padding:6px 0;z-index:100;max-width:660px;margin:0 auto;box-shadow:0 -1px 4px rgba(0,0,0,.04)}}
+.nav a{{text-decoration:none;color:#6b7280;font-size:10px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:2px;padding:4px 12px;border-radius:8px}}
+.nav a.active{{color:#2563eb;background:#eff6ff}}
+.nav a .ic{{font-size:16px}}</style></head><body><div class="c">
 <div class="h"><h1>纳指100 定投决策 v5.1</h1>
 <div class="d">更新: {ts} · {status_note} · 性价比{sc}分({sc_label})</div></div>
 
@@ -296,6 +299,12 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Mic
 <p style="font-size:11px"><b>PE>38</b> 且 VIX<18 → 每周卖3%，10周30%<br><b>PE>38</b> 且 VIX<13 → 每周卖6-8%，4-5周<br><b>PE>33 且浮盈>50%</b> → 卖出20%，分2-3次<br>PE回落<38 立即停止 | 买回: PE<32 或 DD>15%</p></div>
 
 <div class="fo">v5.1 金字塔定投 · 三阶段DD · 溢价切换 · 每日更新 · 仅供参考不构成投资建议</div>
+
+<nav class="nav">
+<a href="index.html" class="active"><span class="ic">📈</span>纳指</a>
+<a href="btc.html"><span class="ic">₿</span>比特币</a>
+<a href="history.html"><span class="ic">📋</span>历史</a>
+</nav>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
@@ -487,6 +496,12 @@ td.high{{background:#fff7ed;color:#d97706;font-weight:700}}
 </div>
 
 <div class="fo">AHR999 自算 · yfinance 数据 · ¥200,000 · 仅供参考不构成投资建议</div>
+
+<nav class="nav">
+<a href="index.html"><span class="ic">📈</span>纳指</a>
+<a href="btc.html" class="active"><span class="ic">₿</span>比特币</a>
+<a href="history.html"><span class="ic">📋</span>历史</a>
+</nav>
 </div>
 
 <script>
