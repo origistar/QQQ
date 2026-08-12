@@ -481,7 +481,7 @@ td.high{{background:#fff7ed;color:#d97706;font-weight:700}}
 <div class="ca"><h3>退出条件</h3>
 <p style="font-size:12px"><b>AHR999 > 2.0</b>：分4周清仓</p>
 <p style="font-size:12px;margin-top:4px">止盈资金暂存，等 AHR999 < 1.2 时重新启动</p>
-<p style="font-size:11px;color:#6b7280;margin-top:4px">¥200,000 总额 · 投完即止</p>
+<p style="font-size:11px;color:#6b7280;margin-top:4px">投完即止</p>
 </div>
 </div>
 
