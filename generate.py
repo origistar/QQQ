@@ -181,7 +181,8 @@ state["last_data_hash"] = data_hash
 save_json(STATE_FILE, state)
 
 # ===== 10. HTML =====
-ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+bj_tz = timezone(timedelta(hours=8))
+ts = datetime.now(bj_tz).strftime("%Y-%m-%d %H:%M")
 
 def h(t,c): return ' class="hi"' if t==tier and c==col else ""
 def z(v): return ' class="z"' if v==0 else ""
@@ -381,7 +382,7 @@ else:
     btc_weekly = 0; btc_shares = 0
     btc_active = "暂停"
 
-btc_ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+btc_ts = datetime.now(bj_tz).strftime("%Y-%m-%d %H:%M")
 btc_status = "⚠ 数据获取异常" if btc_err else "数据正常"
 
 # Save BTC state
