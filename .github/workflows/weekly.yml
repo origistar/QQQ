@@ -1,7 +1,7 @@
 name: 周报生成
 on:
   schedule:
-    - cron: '30 14 * * 0'   # 每周日 UTC 14:30 = 北京时间 22:30（等当日 state.json 已更新）
+    - cron: '30 0 * * 6'   # 每周六 UTC 00:30 = 北京时间 08:30
   workflow_dispatch:
 permissions:
   contents: write
