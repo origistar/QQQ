@@ -1,0 +1,29 @@
+name: 周报生成
+on:
+  schedule:
+    - cron: '30 14 * * 0'   # 每周日 UTC 14:30 = 北京时间 22:30（等当日 state.json 已更新）
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  weekly:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: 安装 Python 依赖
+        run: pip install yfinance playwright
+      - name: 安装 Chromium + 中文字体
+        run: |
+          playwright install --with-deps chromium
+          sudo apt-get update && sudo apt-get install -y fonts-noto-cjk
+      - name: 生成周报
+        run: python weekly.py
+      - name: 提交产物
+        run: |
+          git config user.name "bot"
+          git config user.email "bot@github.com"
+          git add weekly/ weekly_events.json
+          git diff --staged --quiet || git commit -m "📰 周报 $(date +'%Y-%m-%d') 第$(python -c "import datetime;print(datetime.date.today().isocalendar()[1])")周" && git push
