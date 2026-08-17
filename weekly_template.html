@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  width:1080px;
+  background:#eef1f6;
+  font-family:-apple-system,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC","WenQuanYi Micro Hei",sans-serif;
+  color:#3f4859;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap { padding:0 0 40px; }
+
+/* Banner */
+.banner {
+  background:linear-gradient(135deg,#0e1f40 0%,#12264a 55%,#1b3a7a 100%);
+  padding:56px 60px 52px;
+  position:relative;
+  overflow:hidden;
+}
+.banner::after {
+  content:''; position:absolute; right:-80px; top:-80px;
+  width:280px; height:280px; border-radius:50%;
+  background:rgba(37,99,235,0.18);
+}
+.banner .en { color:#6b93e0; font-size:22px; letter-spacing:4px; margin-bottom:18px; }
+.banner h1 { color:#fff; font-size:54px; font-weight:800; letter-spacing:1px; }
+.banner .date { color:#9db4e0; font-size:27px; margin-top:22px; }
+
+/* 区块 */
+.sec { background:#fff; margin:0; padding:44px 60px; }
+.sec + .sec { border-top:14px solid #eef1f6; }
+.sec-title {
+  display:flex; align-items:center;
+  font-size:34px; font-weight:700; color:#12264a;
+  margin-bottom:28px;
+}
+.sec-title .bar { width:6px; height:34px; background:#2563eb; border-radius:3px; margin-right:16px; }
+
+/* 速览正文 */
+.speed { font-size:27px; line-height:2.0; color:#4a5568; }
+.speed b { color:#2563eb; font-weight:700; }
+
+/* PE 定位 */
+.pe-head { font-size:26px; color:#6b7280; margin-bottom:26px; line-height:1.6; }
+.pe-head b { font-size:34px; color:#2563eb; font-weight:800; }
+.pe-bar-wrap { position:relative; padding:34px 0 20px; }
+.pe-bar {
+  height:38px; border-radius:19px;
+  background:linear-gradient(90deg,#34d399 0%,#fbbf24 50%,#ef4444 100%);
+  position:relative;
+  box-shadow:inset 0 2px 4px rgba(0,0,0,0.08);
+}
+.pe-marker {
+  position:absolute; top:-34px;
+  width:4px; height:106px; background:#12264a;
+  border-radius:2px;
+  transform:translateX(-2px);
+}
+.pe-tag {
+  position:absolute; top:-52px;
+  transform:translateX(-50%);
+  background:#12264a; color:#fff;
+  font-size:24px; font-weight:700;
+  padding:6px 18px; border-radius:8px;
+  white-space:nowrap;
+}
+.pe-scale { position:relative; margin-top:26px; height:64px; }
+.pe-scale span {
+  position:absolute; font-size:22px; color:#6b7280;
+  text-align:center; line-height:1.5;
+  transform:translateX(-50%);
+}
+.pe-scale .tick { position:absolute; top:-14px; width:2px; height:12px; background:#9ca3af; transform:translateX(-50%); }
+.pe-legend { font-size:22px; color:#9ca3af; margin-top:8px; letter-spacing:2px; }
+
+/* 表格 */
+table { width:100%; border-collapse:collapse; border-radius:12px; overflow:hidden; }
+thead th {
+  background:#12264a; color:#fff;
+  font-size:25px; font-weight:600;
+  padding:18px 12px; text-align:center;
+}
+tbody td {
+  font-size:26px; text-align:center;
+  padding:18px 12px;
+}
+tbody tr:nth-child(even) td { background:#f7f9fc; }
+tbody td:first-child { font-weight:700; color:#12264a; }
+.up { color:#dc2626; font-weight:600; }
+.down { color:#16a34a; font-weight:600; }
+.flat { color:#9ca3af; }
+
+/* 大事件 */
+.evt { display:flex; align-items:flex-start; margin-bottom:26px; }
+.evt:last-child { margin-bottom:0; }
+.evt .num {
+  flex-shrink:0; width:42px; height:42px; border-radius:50%;
+  background:#2563eb; color:#fff;
+  font-size:24px; font-weight:700;
+  display:flex; align-items:center; justify-content:center;
+  margin-right:20px; margin-top:6px;
+}
+.evt .body { font-size:26px; line-height:1.7; color:#4a5568; }
+.evt .body .t { font-weight:700; color:#12264a; }
+
+/* 定投执行 */
+.exec { font-size:27px; line-height:2.0; color:#4a5568; }
+.exec b { color:#2563eb; font-weight:700; }
+
+/* 建议 */
+.adv { display:flex; align-items:flex-start; margin-bottom:22px; }
+.adv:last-child { margin-bottom:0; }
+.adv .num {
+  flex-shrink:0; width:36px; height:36px; border-radius:50%;
+  background:#2563eb; color:#fff;
+  font-size:22px; font-weight:700;
+  display:flex; align-items:center; justify-content:center;
+  margin-right:18px; margin-top:6px;
+}
+.adv .body { font-size:26px; line-height:1.7; color:#4a5568; }
+
+/* 结尾 */
+.footer {
+  background:#eef1f6;
+  text-align:center;
+  padding:46px 60px 110px;
+  font-size:24px; color:#9ca3af; line-height:2.0;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="banner">
+    <div class="en">NASDAQ 100 · 定投周报</div>
+    <h1>纳指 100 定投周报</h1>
+    <div class="date">__DATE_RANGE__ · 第 __WEEK_NUM__ 周</div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title"><span class="bar"></span>一周速览</div>
+    <div class="speed">__SPEED__</div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title"><span class="bar"></span>PE 历史分位</div>
+    <div class="pe-head">当前 PE <b>__PE_VAL__</b> · 处于近十年 <b>__PE_PCT__%</b> 分位</div>
+    <div class="pe-bar-wrap">
+      <div class="pe-bar"></div>
+      <div class="pe-marker" style="left:__PE_MARKER__%;"></div>
+      <div class="pe-tag" style="left:__PE_MARKER__%;">__PE_VAL__</div>
+    </div>
+    <div class="pe-scale">
+      <div class="tick" style="left:10.4%;"></div>
+      <span style="left:10.4%;">20% 分位<br>25.5</span>
+      <div class="tick" style="left:43.6%;"></div>
+      <span style="left:43.6%;">50% 分位<br>30.1</span>
+      <div class="tick" style="left:93.4%;"></div>
+      <span style="left:93.4%;">80% 分位<br>37.1</span>
+    </div>
+    <div class="pe-legend">低位 ←         合理区间         → 高位</div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title"><span class="bar"></span>本周核心数据</div>
+    <table>
+      <thead>
+        <tr><th>指标</th><th>周一</th><th>周日</th><th>变化</th></tr>
+      </thead>
+      <tbody>__TABLE_ROWS__</tbody>
+    </table>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title"><span class="bar"></span>本周大事件</div>
+    <div class="evt-list">__EVENTS__</div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title"><span class="bar"></span>定投执行</div>
+    <div class="exec">__EXEC__</div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title"><span class="bar"></span>下周操作建议</div>
+    <div class="adv-list">__ADVICES__</div>
+  </div>
+
+  <div class="footer">
+    数据来源：蛋卷基金 · yfinance · 公开财经资讯<br>
+    仅记录本人投资感受，不构成任何投资建议
+  </div>
+
+</div>
+</body>
+</html>
