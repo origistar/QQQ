@@ -28,17 +28,17 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
 .ph{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700}
 .ph1{background:#f0fdf4;color:#16a34a}.ph2{background:#fefce8;color:#d97706}.ph3{background:#fef2f2;color:#dc2626}</style></head><body><div class="c">
 <div class="h"><h1>纳指100 定投决策 v5.1</h1>
-<div class="d">更新: 2026-08-18 11:28 · 数据正常 · 性价比43分(中等)</div></div>
+<div class="d">更新: 2026-08-18 23:17 · 数据正常 · 性价比45分(中等)</div></div>
 
 <div class="r">
 <div class="cd"><div class="va">31.39</div><div class="lb">PE-TTM · 合理偏低</div></div>
-<div class="cd"><div class="va">15.19</div><div class="lb">VIX · 平稳</div></div>
-<div class="cd"><div class="va" style="color:#dc2626">-2.49%</div><div class="lb">回撤 距52周高</div></div>
+<div class="cd"><div class="va">15.88</div><div class="lb">VIX · 平稳</div></div>
+<div class="cd"><div class="va" style="color:#dc2626">-4.23%</div><div class="lb">回撤 距52周高</div></div>
 </div>
 <div class="r">
-<div class="cd"><div class="va">29,995</div><div class="lb">NDX</div></div>
+<div class="cd"><div class="va">29,462</div><div class="lb">NDX</div></div>
 <div class="cd"><div class="va">30.1%</div><div class="lb">ROE</div></div>
-<div class="cd"><div class="va">10.1%</div><div class="lb">溢价率 513100</div></div>
+<div class="cd"><div class="va">10.3%</div><div class="lb">溢价率 513100</div></div>
 </div>
 
 <div class="dc">
@@ -52,7 +52,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
 <div class="ca"><h3>📊 近90天趋势</h3>
 <div style="height:200px"><canvas id="chart"></canvas></div></div>
 
-<div class="ca"><h3>💱 溢价切换</h3><p style="font-size:12px">溢价率 <b>10.1% > 8%</b> → <span style="color:#dc2626">分批次卖出场内持仓，切换回场外（需有场外额度）</span></p></div>
+<div class="ca"><h3>💱 溢价切换</h3><p style="font-size:12px">溢价率 <b>10.3% > 8%</b> → <span style="color:#dc2626">分批次卖出场内持仓，切换回场外（需有场外额度）</span></p></div>
 
 <div class="ca"><h3>PE × VIX 基准矩阵</h3>
 <div style="overflow-x:auto"><table class="tb">
@@ -71,8 +71,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
 </table>
 <p style="font-size:10px;color:#6b7280;margin-top:4px">DD<20%：日常池 · DD≥20%≤1月：反转窗口双池齐发 · DD≥20%>1月：长熊期熊市池独立运作</p></div>
 
-<div class="ca"><h3>🎯 性价比评分 43分（中等）</h3>
-<p style="font-size:11px;color:#6b7280">PE分位(53%)×35% · DD(-2.5%)×25% · VIX(15.2)×20% · ROE(30%)×10% · 均线×10%<br>71-100 极高 · 41-70 中等 · 10-40 偏低</p></div>
+<div class="ca"><h3>🎯 性价比评分 45分（中等）</h3>
+<p style="font-size:11px;color:#6b7280">PE分位(53%)×35% · DD(-4.2%)×25% · VIX(15.9)×20% · ROE(30%)×10% · 均线×10%<br>71-100 极高 · 41-70 中等 · 10-40 偏低</p></div>
 
 <div class="ca"><h3>止盈规则</h3>
 <p style="font-size:11px"><b>PE>38</b> 且 VIX<18 → 每周卖3%，10周30%<br><b>PE>38</b> 且 VIX<13 → 每周卖6-8%，4-5周<br><b>PE>33 且浮盈>50%</b> → 卖出20%，分2-3次<br>PE回落<38 立即停止 | 买回: PE<32 或 DD>15%</p></div>
@@ -89,8 +89,8 @@ type:'line',
 data:{
 labels:["08-10", "08-11", "08-12", "08-13", "08-14", "08-15", "08-16", "08-17", "08-18"],
 datasets:[
-{label:'NDX',data:[29710, 29548, 29803, 30128, 30046, 30046, 30046, 29995, 29995],borderColor:'#2563eb',yAxisID:'y',tension:0.2,pointRadius:0},
-{label:'评分',data:[43, 44, 43, 43, 42, 42, 42, 43, 43],borderColor:'#f59e0b',yAxisID:'y1',tension:0.2,pointRadius:0,borderDash:[3,3]}
+{label:'NDX',data:[29710, 29548, 29803, 30128, 30046, 30046, 30046, 29995, 29462],borderColor:'#2563eb',yAxisID:'y',tension:0.2,pointRadius:0},
+{label:'评分',data:[43, 44, 43, 43, 42, 42, 42, 43, 45],borderColor:'#f59e0b',yAxisID:'y1',tension:0.2,pointRadius:0,borderDash:[3,3]}
 ]},
 options:{
 responsive:true,maintainAspectRatio:false,
