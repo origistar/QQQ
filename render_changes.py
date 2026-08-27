@@ -9,10 +9,18 @@ R = json.load(open("reconstruct_top10.json"))
 REAL = json.load(open("momentum_snapshots.json"))
 LATEST_DATE = max(REAL.keys())
 
-RECON = {
+# 候选重建节点（2025 起各调仓节点）
+CANDIDATE = {
     "SPMO": ["2025-06-30", "2025-12-31", "2026-06-30"],
     "MTUM": ["2025-02-28", "2025-05-31", "2025-08-31", "2025-11-30", "2026-02-28", "2026-05-31"],
 }
+MAX_COLS = 5  # 含「最新官方」列，最多 5 列：最新 + 往前最近 4 期重建
+
+def pick_cols(fund):
+    # 取时间最新的 (MAX_COLS-1) 个重建节点（与最新列合计 ≤5 列），按时间正序（左旧→右新）
+    nodes = [n for n in CANDIDATE[fund] if n in R.get(fund, {})]
+    recent = sorted(nodes, reverse=True)[: MAX_COLS - 1]
+    return sorted(recent)
 META = {
     "SPMO": "Invesco S&P 500 Momentum ETF · 半年度调仓 · 宇宙=标普500",
     "MTUM": "iShares MSCI USA Momentum Factor ETF · 季度调仓 · 宇宙=标普500(近似MSCI USA)",
@@ -24,7 +32,7 @@ def latest_of(fund):
 
 def section(fund):
     cols = []
-    for n in RECON[fund]:
+    for n in pick_cols(fund):
         cur = [t for t, _ in R[fund][n]]
         cols.append((n, cur, {t: m for t, m in R[fund][n]}, "mom"))
     syms, pctmap = latest_of(fund)
@@ -101,7 +109,7 @@ html = f'''<!doctype html><html lang="zh"><head><meta charset="utf-8">
  .leg b {{ color:#8a5a00; }}
 </style></head><body>
 <h1>动量 ETF 前十进出跟踪</h1>
-<div class="sub">SPMO（半年度调仓）· MTUM（季度调仓）· 2025 至今 · 生成 {dt.date.today().isoformat()}</div>
+<div class="sub">SPMO（半年度调仓）· MTUM（季度调仓）· 近期 5 期（含最新官方持仓）· 生成 {dt.date.today().isoformat()}</div>
 <div class="leg">左列=各调仓节点<b>方法重建</b>（标普500时点成分+12个月动量，仅看轮动趋势）；<b>最右列=最新官方实际持仓</b>（yfinance·{LATEST_DATE}抓取，基金公布数据）。每日自动刷新最右列。</div>
 {section("SPMO")}
 {section("MTUM")}
