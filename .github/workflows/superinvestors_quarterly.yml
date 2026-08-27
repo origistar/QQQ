@@ -1,0 +1,24 @@
+name: 顶级投资者13F持仓对比-季度
+on:
+  schedule:
+    - cron: '0 14 20 2,5,8,11 *'   # 每季度第20天 北京时间 22:00（13F 申报截止后）
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - name: 抓取最新两期 13F-HR 并解析
+        run: python superinvestors_13f.py
+      - name: 渲染对比网页
+        run: python render_superinvestors.py
+      - name: 提交更新
+        run: |
+          git config user.name "bot"
+          git config user.email "bot@github.com"
+          git add superinvestors_data.json superinvestors.html
+          git diff --staged --quiet || (git commit -m "🧠 顶级投资者13F持仓对比季度更新 $(date +'%Y-%m-%d')" && git push)
