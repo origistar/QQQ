@@ -88,7 +88,15 @@ NAME_MAP = {
 }
 KEY2CN = {}
 
-def cn_name(raw):
+# CUSIP 级覆盖：同一公司不同份额（如 Alphabet A/C 类）需在持仓表中区分
+CUSIP_OVERRIDE = {
+    "02079K107": "谷歌A(GOOGL)",
+    "02079K305": "谷歌C(GOOG)",
+}
+
+def cn_name(raw, cusip=None):
+    if cusip and cusip in CUSIP_OVERRIDE:
+        return CUSIP_OVERRIDE[cusip]
     k = raw.strip().upper()
     return NAME_MAP.get(k, raw.strip().title())
 
@@ -96,12 +104,12 @@ def esc(s):
     return (str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
 
 def fmt_pct(d):
-    """占比增减展示：正 ▲+x.xpct，负 ▼x.xpct"""
+    """占比增减展示：正 ▲+x.x%，负 ▼x.x%"""
     if d is None:
         return ""
     if d > 0:
-        return "▲+%.1fpct" % d
-    return "▼%.1fpct" % d
+        return "▲+%.1f%%" % d
+    return "▼%.1f%%" % d
 
 def load():
     with open("superinvestors_data.json", "r", encoding="utf-8") as f:
@@ -162,7 +170,7 @@ def render_investor_card(f):
         prev_w = prev_vm.get(cu, 0) / prev_total * 100 if prev_total else 0
         d = cur_w - prev_w
         if cu not in prev_vm:
-            badge = '<span class="badge new">新进 +%.1fpct</span>' % cur_w
+            badge = '<span class="badge new">新进 +%.1f%%</span>' % cur_w
         elif d > 0.05:
             badge = '<span class="badge up">%s</span>' % fmt_pct(d)
         elif d < -0.05:
@@ -172,7 +180,7 @@ def render_investor_card(f):
         rows.append(
             '<tr><td class="rk">%d</td><td class="nm">%s</td>'
             '<td class="pc">%.1f%%</td><td class="ch">%s</td></tr>'
-            % (i, esc(cn_name(h["name"])), cur_w, badge)
+            % (i, esc(cn_name(h["name"], h["cusip"])), cur_w, badge)
         )
 
     chips = (
@@ -194,7 +202,7 @@ def render_investor_card(f):
     exited = f.get("changes", {}).get("exited", [])
     exit_list = ""
     if exited:
-        names = "、".join(esc(cn_name(h["name"])) for h in sorted(exited, key=lambda x: -x["value"])[:8])
+        names = "、".join(esc(cn_name(h["name"], h["cusip"])) for h in sorted(exited, key=lambda x: -x["value"])[:8])
         exit_list = '<div class="exited">本季清仓：%s</div>' % names
 
     return """
@@ -267,16 +275,16 @@ def render_analysis(data, consensus):
         lines = []
         if inc:
             lines.append('<div class="arow up">▲ 增持：%s</div>' % "、".join(
-                "%s %s" % (esc(cn_name(h["name"])), fmt_pct(pct_of(h))) for h in inc))
+                "%s %s" % (esc(cn_name(h["name"], h["cusip"])), fmt_pct(pct_of(h))) for h in inc))
         if dec:
             lines.append('<div class="arow down">▼ 减持：%s</div>' % "、".join(
-                "%s %s" % (esc(cn_name(h["name"])), fmt_pct(pct_of(h))) for h in dec))
+                "%s %s" % (esc(cn_name(h["name"], h["cusip"])), fmt_pct(pct_of(h))) for h in dec))
         if newl:
             lines.append('<div class="arow new">🆕 新进：%s</div>' % "、".join(
-                esc(cn_name(h["name"])) for h in newl))
+                esc(cn_name(h["name"], h["cusip"])) for h in newl))
         if exl:
             lines.append('<div class="arow out">🗑 清仓：%s</div>' % "、".join(
-                esc(cn_name(h["name"])) for h in exl))
+                esc(cn_name(h["name"], h["cusip"])) for h in exl))
         blocks.append(
             '<div class="inv-block"><div class="inv-name">%s <span class="ic">持仓 %d 只</span></div>%s</div>'
             % (esc(f["cn"]), len(f["latest"]["holdings"]), "".join(lines))
