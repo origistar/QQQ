@@ -271,15 +271,15 @@
       "date": "2026-08-31",
       "pe": 30.39,
       "pe_pct": 47.8,
-      "vix": 15.35,
-      "ndx": 29342,
-      "dd_pct": -4.62,
+      "vix": 14.92,
+      "ndx": 29456,
+      "dd_pct": -4.25,
       "tier": "mid_low",
       "phase": "①",
-      "score": 46,
+      "score": 45,
       "daily": 1500,
       "premium": 11.7
     }
   ],
-  "last_data_hash": "30.39|15.35|29342"
+  "last_data_hash": "30.39|14.92|29456"
 }
