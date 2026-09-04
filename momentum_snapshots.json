@@ -964,5 +964,143 @@
       },
       "desc": "iShares MSCI USA Momentum Factor ETF（季度调仓）"
     }
+  },
+  "2026-09-04": {
+    "SPMO": {
+      "top": [
+        {
+          "symbol": "MU",
+          "name": "Micron Technology Inc",
+          "pct": 10.84
+        },
+        {
+          "symbol": "NVDA",
+          "name": "NVIDIA Corp",
+          "pct": 9.05
+        },
+        {
+          "symbol": "AVGO",
+          "name": "Broadcom Inc",
+          "pct": 6.43
+        },
+        {
+          "symbol": "JNJ",
+          "name": "Johnson & Johnson",
+          "pct": 4.65
+        },
+        {
+          "symbol": "GOOGL",
+          "name": "Alphabet Inc Class A",
+          "pct": 4.39
+        },
+        {
+          "symbol": "AMD",
+          "name": "Advanced Micro Devices Inc",
+          "pct": 3.87
+        },
+        {
+          "symbol": "GOOG",
+          "name": "Alphabet Inc Class C",
+          "pct": 3.48
+        },
+        {
+          "symbol": "LRCX",
+          "name": "Lam Research Corp",
+          "pct": 3.43
+        },
+        {
+          "symbol": "XOM",
+          "name": "ExxonMobil Holdings Corp",
+          "pct": 3.15
+        },
+        {
+          "symbol": "CAT",
+          "name": "Caterpillar Inc",
+          "pct": 2.43
+        }
+      ],
+      "sectors": {
+        "realestate": 1.1,
+        "consumer_cyclical": 1.25,
+        "basic_materials": 1.85,
+        "consumer_defensive": 4.39,
+        "technology": 52.84,
+        "communication_services": 8.01,
+        "financial_services": 6.22,
+        "utilities": 1.17,
+        "industrials": 12.28,
+        "energy": 3.49,
+        "healthcare": 7.4
+      },
+      "desc": "Invesco S&P 500 Momentum ETF（半年度调仓）"
+    },
+    "MTUM": {
+      "top": [
+        {
+          "symbol": "MU",
+          "name": "Micron Technology Inc",
+          "pct": 5.15
+        },
+        {
+          "symbol": "AMD",
+          "name": "Advanced Micro Devices Inc",
+          "pct": 5.08
+        },
+        {
+          "symbol": "INTC",
+          "name": "Intel Corp",
+          "pct": 3.73
+        },
+        {
+          "symbol": "CSCO",
+          "name": "Cisco Systems Inc",
+          "pct": 3.61
+        },
+        {
+          "symbol": "JNJ",
+          "name": "Johnson & Johnson",
+          "pct": 3.4
+        },
+        {
+          "symbol": "AMAT",
+          "name": "Applied Materials Inc",
+          "pct": 2.92
+        },
+        {
+          "symbol": "SNDK",
+          "name": "SanDisk Corp Ordinary Shares",
+          "pct": 2.85
+        },
+        {
+          "symbol": "GOOGL",
+          "name": "Alphabet Inc Class A",
+          "pct": 2.77
+        },
+        {
+          "symbol": "PANW",
+          "name": "Palo Alto Networks Inc",
+          "pct": 2.74
+        },
+        {
+          "symbol": "XOM",
+          "name": "ExxonMobil Holdings Corp",
+          "pct": 2.64
+        }
+      ],
+      "sectors": {
+        "realestate": 1.95,
+        "consumer_cyclical": 1.78,
+        "basic_materials": 0.89,
+        "consumer_defensive": 2.9,
+        "technology": 51.4,
+        "communication_services": 4.96,
+        "financial_services": 6.04,
+        "utilities": 0.2,
+        "industrials": 10.75,
+        "energy": 8.97,
+        "healthcare": 10.16
+      },
+      "desc": "iShares MSCI USA Momentum Factor ETF（季度调仓）"
+    }
   }
 }
