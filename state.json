@@ -526,6 +526,19 @@
       "score": 45,
       "daily": 1500,
       "premium": 14.4
+    },
+    {
+      "date": "2026-09-20",
+      "pe": 30.48,
+      "pe_pct": 48.8,
+      "vix": 14.81,
+      "ndx": 29644,
+      "dd_pct": -3.63,
+      "tier": "mid_low",
+      "phase": "①",
+      "score": 45,
+      "daily": 1500,
+      "premium": 14.4
     }
   ],
   "last_data_hash": "30.48|14.81|29644"
