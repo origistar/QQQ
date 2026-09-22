@@ -555,17 +555,17 @@
     },
     {
       "date": "2026-09-22",
-      "pe": 30.48,
-      "pe_pct": 48.8,
+      "pe": 31.23,
+      "pe_pct": 51.9,
       "vix": 14.87,
       "ndx": 30482,
       "dd_pct": -0.91,
       "tier": "mid_low",
       "phase": "①",
-      "score": 43,
+      "score": 42,
       "daily": 1500,
-      "premium": 14.4
+      "premium": 16.1
     }
   ],
-  "last_data_hash": "30.48|14.87|30482"
+  "last_data_hash": "31.23|14.87|30482"
 }
