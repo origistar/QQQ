@@ -596,15 +596,15 @@
       "date": "2026-09-25",
       "pe": 30.96,
       "pe_pct": 50.9,
-      "vix": 15.67,
-      "ndx": 30478,
-      "dd_pct": -0.95,
+      "vix": 14.99,
+      "ndx": 30642,
+      "dd_pct": -0.42,
       "tier": "mid_low",
       "phase": "①",
-      "score": 43,
+      "score": 42,
       "daily": 1500,
       "premium": 12.9
     }
   ],
-  "last_data_hash": "30.96|15.67|30478"
+  "last_data_hash": "30.96|14.99|30642"
 }
