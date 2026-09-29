@@ -648,15 +648,15 @@
       "date": "2026-09-29",
       "pe": 30.83,
       "pe_pct": 50.3,
-      "vix": 16.07,
-      "ndx": 30276,
-      "dd_pct": -1.61,
+      "vix": 16.02,
+      "ndx": 30355,
+      "dd_pct": -1.35,
       "tier": "mid_low",
       "phase": "①",
       "score": 44,
       "daily": 1500,
-      "premium": 12.1
+      "premium": 14.3
     }
   ],
-  "last_data_hash": "30.83|16.07|30276"
+  "last_data_hash": "30.83|16.02|30355"
 }
