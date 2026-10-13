@@ -830,15 +830,15 @@
       "date": "2026-10-13",
       "pe": 30.78,
       "pe_pct": 50.0,
-      "vix": 15.21,
-      "ndx": 30664,
-      "dd_pct": -2.22,
+      "vix": 15.32,
+      "ndx": 30569,
+      "dd_pct": -2.53,
       "tier": "mid_low",
       "phase": "①",
       "score": 44,
       "daily": 1500,
-      "premium": 14.7
+      "premium": 15.5
     }
   ],
-  "last_data_hash": "30.78|15.21|30664"
+  "last_data_hash": "30.78|15.32|30569"
 }
