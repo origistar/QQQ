@@ -947,15 +947,15 @@
       "date": "2026-10-22",
       "pe": 29.77,
       "pe_pct": 43.0,
-      "vix": 16.68,
-      "ndx": 29822,
-      "dd_pct": -4.91,
+      "vix": 19.51,
+      "ndx": 29003,
+      "dd_pct": -7.52,
       "tier": "mid_low",
       "phase": "①",
-      "score": 49,
-      "daily": 1500,
-      "premium": 15.0
+      "score": 53,
+      "daily": 3000,
+      "premium": 13.3
     }
   ],
-  "last_data_hash": "29.77|16.68|29822"
+  "last_data_hash": "29.77|19.51|29003"
 }
