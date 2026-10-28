@@ -1025,15 +1025,15 @@
       "date": "2026-10-28",
       "pe": 29.2,
       "pe_pct": 40.5,
-      "vix": 17.52,
-      "ndx": 29651,
-      "dd_pct": -5.45,
+      "vix": 17.01,
+      "ndx": 29717,
+      "dd_pct": -5.24,
       "tier": "mid_low",
       "phase": "①",
-      "score": 51,
+      "score": 50,
       "daily": 1500,
-      "premium": 17.3
+      "premium": 16.7
     }
   ],
-  "last_data_hash": "29.20|17.52|29651"
+  "last_data_hash": "29.20|17.01|29717"
 }
