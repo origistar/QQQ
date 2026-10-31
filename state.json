@@ -1062,17 +1062,17 @@
     },
     {
       "date": "2026-10-31",
-      "pe": 28.2,
-      "pe_pct": 36.0,
+      "pe": 27.36,
+      "pe_pct": 27.0,
       "vix": 19.42,
       "ndx": 28384,
       "dd_pct": -9.49,
-      "tier": "mid_low",
+      "tier": "low",
       "phase": "①",
-      "score": 57,
-      "daily": 3000,
+      "score": 60,
+      "daily": 4500,
       "premium": 13.9
     }
   ],
-  "last_data_hash": "28.20|19.42|28384"
+  "last_data_hash": "27.36|19.42|28384"
 }
