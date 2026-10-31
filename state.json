@@ -1059,7 +1059,20 @@
       "score": 60,
       "daily": 4000,
       "premium": 13.9
+    },
+    {
+      "date": "2026-10-31",
+      "pe": 28.2,
+      "pe_pct": 36.0,
+      "vix": 19.42,
+      "ndx": 28384,
+      "dd_pct": -9.49,
+      "tier": "mid_low",
+      "phase": "①",
+      "score": 57,
+      "daily": 3000,
+      "premium": 13.9
     }
   ],
-  "last_data_hash": "28.20|22.51|28127"
+  "last_data_hash": "28.20|19.42|28384"
 }
