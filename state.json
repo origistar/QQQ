@@ -1181,15 +1181,15 @@
       "date": "2026-11-09",
       "pe": 26.28,
       "pe_pct": 21.4,
-      "vix": 25.64,
-      "ndx": 26989,
-      "dd_pct": -13.94,
+      "vix": 19.92,
+      "ndx": 27907,
+      "dd_pct": -11.01,
       "tier": "low",
       "phase": "①",
-      "score": 70,
+      "score": 63,
       "daily": 6000,
-      "premium": 20.2
+      "premium": 18.6
     }
   ],
-  "last_data_hash": "26.28|25.64|26989"
+  "last_data_hash": "26.28|19.92|27907"
 }
