@@ -1207,15 +1207,15 @@
       "date": "2026-11-11",
       "pe": 26.79,
       "pe_pct": 23.1,
-      "vix": 19.46,
-      "ndx": 27740,
-      "dd_pct": -11.55,
+      "vix": 17.54,
+      "ndx": 28374,
+      "dd_pct": -9.52,
       "tier": "low",
       "phase": "①",
-      "score": 62,
-      "daily": 6000,
-      "premium": 19.6
+      "score": 59,
+      "daily": 3000,
+      "premium": 20.3
     }
   ],
-  "last_data_hash": "26.79|19.46|27740"
+  "last_data_hash": "26.79|17.54|28374"
 }
