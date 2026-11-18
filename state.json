@@ -1293,7 +1293,20 @@
       "score": 70,
       "daily": 6000,
       "premium": 19.1
+    },
+    {
+      "date": "2026-11-18",
+      "pe": 25.49,
+      "pe_pct": 15.4,
+      "vix": 25.46,
+      "ndx": 27001,
+      "dd_pct": -13.9,
+      "tier": "low",
+      "phase": "①",
+      "score": 72,
+      "daily": 6000,
+      "premium": 19.2
     }
   ],
-  "last_data_hash": "26.17|25.46|27001"
+  "last_data_hash": "25.49|25.46|27001"
 }
