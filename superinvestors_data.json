@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-27",
+ "generated": "2026-11-20",
  "filers": [
   {
    "key": "buffett",
@@ -7,6 +7,223 @@
    "en": "Warren Buffett",
    "entity": "Berkshire Hathaway Inc.",
    "latest": {
+    "period": "2026-09-30",
+    "filingDate": "2026-11-16",
+    "total_value": 304196581325,
+    "holdings": [
+     {
+      "name": "ALLY FINL INC",
+      "cusip": "02005N100",
+      "value": 1015740001,
+      "shares": 27000000,
+      "putCall": ""
+     },
+     {
+      "name": "ALPHABET INC",
+      "cusip": "02079K107",
+      "value": 9264186660,
+      "shares": 27188433,
+      "putCall": ""
+     },
+     {
+      "name": "ALPHABET INC",
+      "cusip": "02079K305",
+      "value": 27110464741,
+      "shares": 78791167,
+      "putCall": ""
+     },
+     {
+      "name": "AMERICAN EXPRESS CO",
+      "cusip": "025816109",
+      "value": 46104813870,
+      "shares": 151610700,
+      "putCall": ""
+     },
+     {
+      "name": "APPLE INC",
+      "cusip": "037833100",
+      "value": 75901188420,
+      "shares": 227917808,
+      "putCall": ""
+     },
+     {
+      "name": "BANK OF AMER CORP",
+      "cusip": "060505104",
+      "value": 24812509222,
+      "shares": 455860908,
+      "putCall": ""
+     },
+     {
+      "name": "CAPITAL ONE FINL CORP",
+      "cusip": "14040H105",
+      "value": 222030500,
+      "shares": 1150000,
+      "putCall": ""
+     },
+     {
+      "name": "CHEVRON CORPORATION",
+      "cusip": "166764100",
+      "value": 17230393553,
+      "shares": 84375856,
+      "putCall": ""
+     },
+     {
+      "name": "COCA COLA CO",
+      "cusip": "191216100",
+      "value": 34432000000,
+      "shares": 400000000,
+      "putCall": ""
+     },
+     {
+      "name": "D R HORTON INC",
+      "cusip": "23331A109",
+      "value": 487021,
+      "shares": 3564,
+      "putCall": ""
+     },
+     {
+      "name": "DAVITA INC",
+      "cusip": "23918K108",
+      "value": 5019719296,
+      "shares": 28697229,
+      "putCall": ""
+     },
+     {
+      "name": "DELTA AIR LINES INC",
+      "cusip": "247361702",
+      "value": 5378997000,
+      "shares": 64450000,
+      "putCall": ""
+     },
+     {
+      "name": "JEFFERIES FINANCIAL GROUP IN",
+      "cusip": "47233W109",
+      "value": 19826607,
+      "shares": 433558,
+      "putCall": ""
+     },
+     {
+      "name": "KRAFT HEINZ CO",
+      "cusip": "500754106",
+      "value": 7398423065,
+      "shares": 325634818,
+      "putCall": ""
+     },
+     {
+      "name": "KROGER CO",
+      "cusip": "501044101",
+      "value": 2051700000,
+      "shares": 35000000,
+      "putCall": ""
+     },
+     {
+      "name": "LENNAR CORP",
+      "cusip": "526057104",
+      "value": 2124149633,
+      "shares": 26034436,
+      "putCall": ""
+     },
+     {
+      "name": "LENNAR CORP",
+      "cusip": "526057302",
+      "value": 44234470,
+      "shares": 553000,
+      "putCall": ""
+     },
+     {
+      "name": "LIBERTY LIVE HOLDINGS INC",
+      "cusip": "530909100",
+      "value": 471930689,
+      "shares": 4986588,
+      "putCall": ""
+     },
+     {
+      "name": "LIBERTY LIVE HOLDINGS INC",
+      "cusip": "530909308",
+      "value": 1029599657,
+      "shares": 10587143,
+      "putCall": ""
+     },
+     {
+      "name": "LOUISIANA PAC CORP",
+      "cusip": "546347105",
+      "value": 365662388,
+      "shares": 5664793,
+      "putCall": ""
+     },
+     {
+      "name": "MACYS INC",
+      "cusip": "55616P104",
+      "value": 171658476,
+      "shares": 7538800,
+      "putCall": ""
+     },
+     {
+      "name": "MOODYS CORP",
+      "cusip": "615369105",
+      "value": 11203286284,
+      "shares": 24669778,
+      "putCall": ""
+     },
+     {
+      "name": "NVR INC",
+      "cusip": "62944T105",
+      "value": 68387582,
+      "shares": 11112,
+      "putCall": ""
+     },
+     {
+      "name": "NEW YORK TIMES CO MTN BE",
+      "cusip": "650111107",
+      "value": 1000090000,
+      "shares": 15700000,
+      "putCall": ""
+     },
+     {
+      "name": "NUCOR CORP",
+      "cusip": "670346105",
+      "value": 369506390,
+      "shares": 1580776,
+      "putCall": ""
+     },
+     {
+      "name": "OCCIDENTAL PETE CORP",
+      "cusip": "674599105",
+      "value": 14656559963,
+      "shares": 264941431,
+      "putCall": ""
+     },
+     {
+      "name": "SIRIUSXM HOLDINGS INC",
+      "cusip": "829933100",
+      "value": 3230008188,
+      "shares": 124807117,
+      "putCall": ""
+     },
+     {
+      "name": "VERISIGN INC",
+      "cusip": "92343E102",
+      "value": 1670101573,
+      "shares": 5922136,
+      "putCall": ""
+     },
+     {
+      "name": "CHUBB LIMITED",
+      "cusip": "H1467J104",
+      "value": 11139546771,
+      "shares": 34249183,
+      "putCall": ""
+     },
+     {
+      "name": "BENDING SPOONS SPA",
+      "cusip": "T19377109",
+      "value": 689379305,
+      "shares": 20689655,
+      "putCall": ""
+     }
+    ]
+   },
+   "prev": {
     "period": "2026-06-30",
     "filingDate": "2026-08-14",
     "total_value": 299253556246,
@@ -216,405 +433,193 @@
      }
     ]
    },
-   "prev": {
-    "period": "2026-03-31",
-    "filingDate": "2026-05-15",
-    "total_value": 263095703570,
-    "holdings": [
+   "changes": {
+    "new": [
      {
-      "name": "ALLY FINL INC",
-      "cusip": "02005N100",
-      "value": 1137670000,
-      "shares": 29000000,
+      "name": "BENDING SPOONS SPA",
+      "cusip": "T19377109",
+      "value": 689379305,
+      "shares": 20689655,
       "putCall": ""
-     },
-     {
-      "name": "ALPHABET INC",
-      "cusip": "02079K107",
-      "value": 1028454775,
-      "shares": 3585215,
-      "putCall": ""
-     },
-     {
-      "name": "ALPHABET INC",
-      "cusip": "02079K305",
-      "value": 15600071913,
-      "shares": 54249798,
-      "putCall": ""
-     },
-     {
-      "name": "AMERICAN EXPRESS CO",
-      "cusip": "025816109",
-      "value": 45859204536,
-      "shares": 151610700,
-      "putCall": ""
-     },
+     }
+    ],
+    "exited": [],
+    "increased": [
      {
       "name": "APPLE INC",
       "cusip": "037833100",
-      "value": 57843260493,
-      "shares": 227917808,
-      "putCall": ""
-     },
-     {
-      "name": "BANK AMERICA CORP",
-      "cusip": "060505104",
-      "value": 25039178044,
-      "shares": 513624165,
-      "putCall": ""
-     },
-     {
-      "name": "CAPITAL ONE FINL CORP",
-      "cusip": "14040H105",
-      "value": 1304374500,
-      "shares": 7150000,
-      "putCall": ""
+      "value": 75901188420,
+      "delta": 9950891497
      },
      {
       "name": "CHEVRON CORPORATION",
       "cusip": "166764100",
-      "value": 17457364606,
-      "shares": 84375856,
-      "putCall": ""
+      "value": 17230393553,
+      "delta": 3244251663
      },
      {
       "name": "COCA COLA CO",
       "cusip": "191216100",
-      "value": 30420000000,
-      "shares": 400000000,
-      "putCall": ""
-     },
-     {
-      "name": "CONSTELLATION BRANDS INC",
-      "cusip": "21036P108",
-      "value": 94933500,
-      "shares": 632890,
-      "putCall": ""
-     },
-     {
-      "name": "DAVITA INC",
-      "cusip": "23918K108",
-      "value": 4626158909,
-      "shares": 30100585,
-      "putCall": ""
-     },
-     {
-      "name": "DELTA AIR LINES INC",
-      "cusip": "247361702",
-      "value": 2646532635,
-      "shares": 39809456,
-      "putCall": ""
-     },
-     {
-      "name": "JEFFERIES FINANCIAL GROUP IN",
-      "cusip": "47233W109",
-      "value": 17892939,
-      "shares": 433558,
-      "putCall": ""
-     },
-     {
-      "name": "KRAFT HEINZ CO",
-      "cusip": "500754106",
-      "value": 7323527057,
-      "shares": 325634818,
-      "putCall": ""
-     },
-     {
-      "name": "KROGER CO",
-      "cusip": "501044101",
-      "value": 3618000000,
-      "shares": 50000000,
-      "putCall": ""
-     },
-     {
-      "name": "LENNAR CORP",
-      "cusip": "526057104",
-      "value": 877052911,
-      "shares": 10099642,
-      "putCall": ""
-     },
-     {
-      "name": "LENNAR CORP",
-      "cusip": "526057302",
-      "value": 19995576,
-      "shares": 237703,
-      "putCall": ""
-     },
-     {
-      "name": "LIBERTY LIVE HOLDINGS INC",
-      "cusip": "530909100",
-      "value": 456970925,
-      "shares": 4986588,
-      "putCall": ""
-     },
-     {
-      "name": "LIBERTY LIVE HOLDINGS INC",
-      "cusip": "530909308",
-      "value": 996356028,
-      "shares": 10587143,
-      "putCall": ""
-     },
-     {
-      "name": "LOUISIANA PAC CORP",
-      "cusip": "546347105",
-      "value": 412113691,
-      "shares": 5664793,
-      "putCall": ""
-     },
-     {
-      "name": "MACYS INC",
-      "cusip": "55616P104",
-      "value": 54963842,
-      "shares": 3038355,
-      "putCall": ""
-     },
-     {
-      "name": "MOODYS CORP",
-      "cusip": "615369105",
-      "value": 10762190653,
-      "shares": 24669778,
-      "putCall": ""
-     },
-     {
-      "name": "NVR INC",
-      "cusip": "62944T105",
-      "value": 73226191,
-      "shares": 11112,
-      "putCall": ""
-     },
-     {
-      "name": "NEW YORK TIMES CO MTN BE",
-      "cusip": "650111107",
-      "value": 1268219376,
-      "shares": 15146535,
-      "putCall": ""
-     },
-     {
-      "name": "NUCOR CORP",
-      "cusip": "670346105",
-      "value": 660686383,
-      "shares": 3907075,
-      "putCall": ""
+      "value": 34432000000,
+      "delta": 1924000000
      },
      {
       "name": "OCCIDENTAL PETE CORP",
       "cusip": "674599105",
-      "value": 17221193015,
-      "shares": 264941431,
-      "putCall": ""
-     },
-     {
-      "name": "SIRIUSXM HOLDINGS INC",
-      "cusip": "829933100",
-      "value": 2880548260,
-      "shares": 124807117,
-      "putCall": ""
-     },
-     {
-      "name": "VERISIGN INC",
-      "cusip": "92343E102",
-      "value": 2232726597,
-      "shares": 8989880,
-      "putCall": ""
-     },
-     {
-      "name": "CHUBB LTD SWITZ",
-      "cusip": "H1467J104",
-      "value": 11162836215,
-      "shares": 34249183,
-      "putCall": ""
-     }
-    ]
-   },
-   "changes": {
-    "new": [
-     {
-      "name": "D R HORTON INC",
-      "cusip": "23331A109",
-      "value": 580504,
-      "shares": 3564,
-      "putCall": ""
-     }
-    ],
-    "exited": [
-     {
-      "name": "CONSTELLATION BRANDS INC",
-      "cusip": "21036P108",
-      "value": 94933500,
-      "shares": 632890,
-      "putCall": ""
-     }
-    ],
-    "increased": [
-     {
-      "name": "ALPHABET INC",
-      "cusip": "02079K305",
-      "value": 28157599351,
-      "delta": 12557527438
-     },
-     {
-      "name": "ALPHABET INC",
-      "cusip": "02079K107",
-      "value": 9606489032,
-      "delta": 8578034257
-     },
-     {
-      "name": "APPLE INC",
-      "cusip": "037833100",
-      "value": 65950296923,
-      "delta": 8107036430
-     },
-     {
-      "name": "AMERICAN EXPRESS CO",
-      "cusip": "025816109",
-      "value": 51282319275,
-      "delta": 5423114739
-     },
-     {
-      "name": "DELTA AIR LINES INC",
-      "cusip": "247361702",
-      "value": 5368591200,
-      "delta": 2722058565
-     },
-     {
-      "name": "BANK OF AMER CORP",
-      "cusip": "060505104",
-      "value": 27543790975,
-      "delta": 2504612931
-     },
-     {
-      "name": "COCA COLA CO",
-      "cusip": "191216100",
-      "value": 32508000000,
-      "delta": 2088000000
-     },
-     {
-      "name": "DAVITA INC",
-      "cusip": "23918K108",
-      "value": 6425268898,
-      "delta": 1799109989
-     },
-     {
-      "name": "SIRIUSXM HOLDINGS INC",
-      "cusip": "829933100",
-      "value": 3686802237,
-      "delta": 806253977
-     },
-     {
-      "name": "CHUBB LIMITED",
-      "cusip": "H1467J104",
-      "value": 11670066615,
-      "delta": 507230400
-     },
-     {
-      "name": "MOODYS CORP",
-      "cusip": "615369105",
-      "value": 11173435852,
-      "delta": 411245199
-     },
-     {
-      "name": "KRAFT HEINZ CO",
-      "cusip": "500754106",
-      "value": 7691494401,
-      "delta": 367967344
+      "value": 14656559963,
+      "delta": 1788354659
      },
      {
       "name": "LENNAR CORP",
       "cusip": "526057104",
-      "value": 1186481443,
-      "delta": 309428532
+      "value": 2124149633,
+      "delta": 937668190
      },
      {
-      "name": "LIBERTY LIVE HOLDINGS INC",
-      "cusip": "530909308",
-      "value": 1118425787,
-      "delta": 122069759
-     },
-     {
-      "name": "MACYS INC",
-      "cusip": "55616P104",
-      "value": 173031882,
-      "delta": 118068040
-     },
-     {
-      "name": "ALLY FINL INC",
-      "cusip": "02005N100",
-      "value": 1240650000,
-      "delta": 102980000
-     },
-     {
-      "name": "LIBERTY LIVE HOLDINGS INC",
-      "cusip": "530909100",
-      "value": 504941901,
-      "delta": 47970976
-     },
-     {
-      "name": "LOUISIANA PAC CORP",
-      "cusip": "546347105",
-      "value": 445592617,
-      "delta": 33478926
-     },
-     {
-      "name": "VERISIGN INC",
-      "cusip": "92343E102",
-      "value": 2261494212,
-      "delta": 28767615
+      "name": "MOODYS CORP",
+      "cusip": "615369105",
+      "value": 11203286284,
+      "delta": 29850432
      },
      {
       "name": "LENNAR CORP",
       "cusip": "526057302",
-      "value": 26445959,
-      "delta": 6450383
+      "value": 44234470,
+      "delta": 17788511
      },
      {
-      "name": "JEFFERIES FINANCIAL GROUP IN",
-      "cusip": "47233W109",
-      "value": 21669229,
-      "delta": 3776290
-     },
-     {
-      "name": "NVR INC",
-      "cusip": "62944T105",
-      "value": 75710501,
-      "delta": 2484310
+      "name": "DELTA AIR LINES INC",
+      "cusip": "247361702",
+      "value": 5378997000,
+      "delta": 10405800
      }
     ],
     "decreased": [
      {
-      "name": "OCCIDENTAL PETE CORP",
-      "cusip": "674599105",
-      "value": 12868205304,
-      "delta": -4352987711
+      "name": "AMERICAN EXPRESS CO",
+      "cusip": "025816109",
+      "value": 46104813870,
+      "delta": -5177505405
      },
      {
-      "name": "CHEVRON CORPORATION",
-      "cusip": "166764100",
-      "value": 13986141890,
-      "delta": -3471222716
+      "name": "BANK OF AMER CORP",
+      "cusip": "060505104",
+      "value": 24812509222,
+      "delta": -2731281753
      },
      {
-      "name": "KROGER CO",
-      "cusip": "501044101",
-      "value": 2165670000,
-      "delta": -1452330000
+      "name": "DAVITA INC",
+      "cusip": "23918K108",
+      "value": 5019719296,
+      "delta": -1405549602
+     },
+     {
+      "name": "ALPHABET INC",
+      "cusip": "02079K305",
+      "value": 27110464741,
+      "delta": -1047134610
+     },
+     {
+      "name": "VERISIGN INC",
+      "cusip": "92343E102",
+      "value": 1670101573,
+      "delta": -591392639
+     },
+     {
+      "name": "CHUBB LIMITED",
+      "cusip": "H1467J104",
+      "value": 11139546771,
+      "delta": -530519844
+     },
+     {
+      "name": "SIRIUSXM HOLDINGS INC",
+      "cusip": "829933100",
+      "value": 3230008188,
+      "delta": -456794049
      },
      {
       "name": "CAPITAL ONE FINL CORP",
       "cusip": "14040H105",
-      "value": 601860000,
-      "delta": -702514500
+      "value": 222030500,
+      "delta": -379829500
      },
      {
-      "name": "NUCOR CORP",
-      "cusip": "670346105",
-      "value": 413814258,
-      "delta": -246872125
+      "name": "ALPHABET INC",
+      "cusip": "02079K107",
+      "value": 9264186660,
+      "delta": -342302372
+     },
+     {
+      "name": "KRAFT HEINZ CO",
+      "cusip": "500754106",
+      "value": 7398423065,
+      "delta": -293071336
+     },
+     {
+      "name": "ALLY FINL INC",
+      "cusip": "02005N100",
+      "value": 1015740001,
+      "delta": -224909999
+     },
+     {
+      "name": "KROGER CO",
+      "cusip": "501044101",
+      "value": 2051700000,
+      "delta": -113970000
      },
      {
       "name": "NEW YORK TIMES CO MTN BE",
       "cusip": "650111107",
-      "value": 1098686000,
-      "delta": -169533376
+      "value": 1000090000,
+      "delta": -98596000
+     },
+     {
+      "name": "LIBERTY LIVE HOLDINGS INC",
+      "cusip": "530909308",
+      "value": 1029599657,
+      "delta": -88826130
+     },
+     {
+      "name": "LOUISIANA PAC CORP",
+      "cusip": "546347105",
+      "value": 365662388,
+      "delta": -79930229
+     },
+     {
+      "name": "NUCOR CORP",
+      "cusip": "670346105",
+      "value": 369506390,
+      "delta": -44307868
+     },
+     {
+      "name": "LIBERTY LIVE HOLDINGS INC",
+      "cusip": "530909100",
+      "value": 471930689,
+      "delta": -33011212
+     },
+     {
+      "name": "NVR INC",
+      "cusip": "62944T105",
+      "value": 68387582,
+      "delta": -7322919
+     },
+     {
+      "name": "JEFFERIES FINANCIAL GROUP IN",
+      "cusip": "47233W109",
+      "value": 19826607,
+      "delta": -1842622
+     },
+     {
+      "name": "MACYS INC",
+      "cusip": "55616P104",
+      "value": 171658476,
+      "delta": -1373406
+     },
+     {
+      "name": "D R HORTON INC",
+      "cusip": "23331A109",
+      "value": 487021,
+      "delta": -93483
      }
     ]
    }
@@ -625,6 +630,125 @@
    "en": "Duan Yongping",
    "entity": "H&H International Investment, LLC",
    "latest": {
+    "period": "2026-09-30",
+    "filingDate": "2026-11-16",
+    "total_value": 17190742843,
+    "holdings": [
+     {
+      "name": "ALPHABET INC",
+      "cusip": "02079K107",
+      "value": 392430258,
+      "shares": 1151700,
+      "putCall": ""
+     },
+     {
+      "name": "APPLE INC",
+      "cusip": "037833100",
+      "value": 7060824247,
+      "shares": 21202403,
+      "putCall": ""
+     },
+     {
+      "name": "BERKSHIRE HATHAWAY INC DEL",
+      "cusip": "084670702",
+      "value": 4161266568,
+      "shares": 8356796,
+      "putCall": ""
+     },
+     {
+      "name": "CREDO TECHNOLOGY GROUP HOLDI",
+      "cusip": "G25457105",
+      "value": 117127227,
+      "shares": 601300,
+      "putCall": ""
+     },
+     {
+      "name": "DISNEY WALT CO",
+      "cusip": "254687106",
+      "value": 179022340,
+      "shares": 1706600,
+      "putCall": ""
+     },
+     {
+      "name": "MICROSOFT CORP",
+      "cusip": "594918104",
+      "value": 356003890,
+      "shares": 694100,
+      "putCall": ""
+     },
+     {
+      "name": "NVIDIA CORPORATION",
+      "cusip": "67066G104",
+      "value": 529721701,
+      "shares": 2319475,
+      "putCall": ""
+     },
+     {
+      "name": "OCCIDENTAL PETE CORP",
+      "cusip": "674599105",
+      "value": 567666180,
+      "shares": 10261500,
+      "putCall": ""
+     },
+     {
+      "name": "PALANTIR TECHNOLOGIES INC",
+      "cusip": "69608A108",
+      "value": 11223000,
+      "shares": 60000,
+      "putCall": ""
+     },
+     {
+      "name": "PDD HOLDINGS INC",
+      "cusip": "722304102",
+      "value": 2181607550,
+      "shares": 27990859,
+      "putCall": ""
+     },
+     {
+      "name": "SNOWFLAKE INC",
+      "cusip": "833445109",
+      "value": 3395600,
+      "shares": 10000,
+      "putCall": ""
+     },
+     {
+      "name": "SPACE EXPLORATION TECHN CORP",
+      "cusip": "84615Q103",
+      "value": 30156914,
+      "shares": 199900,
+      "putCall": ""
+     },
+     {
+      "name": "SYNOPSYS INC",
+      "cusip": "871607107",
+      "value": 4349400,
+      "shares": 10000,
+      "putCall": ""
+     },
+     {
+      "name": "TEMPUS AI INC",
+      "cusip": "88023B103",
+      "value": 1638000,
+      "shares": 20000,
+      "putCall": ""
+     },
+     {
+      "name": "TESLA INC",
+      "cusip": "88160R101",
+      "value": 1447624800,
+      "shares": 4080000,
+      "putCall": ""
+     },
+     {
+      "name": "UNITEDHEALTH GROUP INC",
+      "cusip": "91324P102",
+      "value": 146685168,
+      "shares": 399600,
+      "putCall": ""
+     }
+    ]
+   },
+   "prev": {
     "period": "2026-06-30",
     "filingDate": "2026-08-14",
     "total_value": 19100584155,
@@ -757,276 +881,131 @@
      }
     ]
    },
-   "prev": {
-    "period": "2026-03-31",
-    "filingDate": "2026-05-19",
-    "total_value": 20003996234,
-    "holdings": [
-     {
-      "name": "ALPHABET INC",
-      "cusip": "02079K107",
-      "value": 1063103160,
-      "shares": 3706000,
-      "putCall": ""
-     },
-     {
-      "name": "APPLE INC",
-      "cusip": "037833100",
-      "value": 7346105601,
-      "shares": 28945607,
-      "putCall": ""
-     },
-     {
-      "name": "BERKSHIRE HATHAWAY INC DEL",
-      "cusip": "084670702",
-      "value": 4383623843,
-      "shares": 9147796,
-      "putCall": ""
-     },
-     {
-      "name": "CIRCLE INTERNET GROUP INC",
-      "cusip": "172573107",
-      "value": 19082000,
-      "shares": 200000,
-      "putCall": ""
-     },
-     {
-      "name": "CREDO TECHNOLOGY GROUP HOLDI",
-      "cusip": "G25457105",
-      "value": 70515144,
-      "shares": 751200,
-      "putCall": ""
-     },
-     {
-      "name": "CROWDSTRIKE HLDGS INC",
-      "cusip": "22788C105",
-      "value": 3904100,
-      "shares": 10000,
-      "putCall": ""
-     },
-     {
-      "name": "DISNEY WALT CO",
-      "cusip": "254687106",
-      "value": 145707284,
-      "shares": 1511800,
-      "putCall": ""
-     },
-     {
-      "name": "INNODATA INC",
-      "cusip": "457642205",
-      "value": 386200,
-      "shares": 10000,
-      "putCall": ""
-     },
-     {
-      "name": "MICROSOFT CORP",
-      "cusip": "594918104",
-      "value": 376092720,
-      "shares": 1016000,
-      "putCall": ""
-     },
-     {
-      "name": "NVIDIA CORPORATION",
-      "cusip": "67066G104",
-      "value": 2414354360,
-      "shares": 13843775,
-      "putCall": ""
-     },
-     {
-      "name": "OCCIDENTAL PETE CORP",
-      "cusip": "674599105",
-      "value": 666997500,
-      "shares": 10261500,
-      "putCall": ""
-     },
-     {
-      "name": "PALANTIR TECHNOLOGIES INC",
-      "cusip": "69608A108",
-      "value": 8776800,
-      "shares": 60000,
-      "putCall": ""
-     },
-     {
-      "name": "PDD HOLDINGS INC",
-      "cusip": "722304102",
-      "value": 2017880681,
-      "shares": 19748294,
-      "putCall": ""
-     },
-     {
-      "name": "SNOWFLAKE INC",
-      "cusip": "833445109",
-      "value": 1508200,
-      "shares": 10000,
-      "putCall": ""
-     },
-     {
-      "name": "SYNOPSYS INC",
-      "cusip": "871607107",
-      "value": 3964800,
-      "shares": 10000,
-      "putCall": ""
-     },
-     {
-      "name": "TAIWAN SEMICONDUCTOR MANUFAC",
-      "cusip": "874039100",
-      "value": 51098040,
-      "shares": 151200,
-      "putCall": ""
-     },
-     {
-      "name": "TEMPUS AI INC",
-      "cusip": "88023B103",
-      "value": 904400,
-      "shares": 20000,
-      "putCall": ""
-     },
-     {
-      "name": "TESLA INC",
-      "cusip": "88160R101",
-      "value": 1267258575,
-      "shares": 3408900,
-      "putCall": ""
-     },
-     {
-      "name": "UNITEDHEALTH GROUP INC",
-      "cusip": "91324P102",
-      "value": 162732826,
-      "shares": 601400,
-      "putCall": ""
-     }
-    ]
-   },
    "changes": {
     "new": [
+     {
+      "name": "SPACE EXPLORATION TECHN CORP",
+      "cusip": "84615Q103",
+      "value": 30156914,
+      "shares": 199900,
+      "putCall": ""
+     }
+    ],
+    "exited": [
      {
       "name": "ALIBABA GROUP HLDG LTD",
       "cusip": "01609W102",
       "value": 28928372,
       "shares": 301400,
       "putCall": ""
-     }
-    ],
-    "exited": [
+     },
      {
-      "name": "TAIWAN SEMICONDUCTOR MANUFAC",
-      "cusip": "874039100",
-      "value": 51098040,
-      "shares": 151200,
+      "name": "CIRCLE INTERNET GROUP INC",
+      "cusip": "172573107",
+      "value": 12526000,
+      "shares": 200000,
       "putCall": ""
      },
      {
-      "name": "CROWDSTRIKE HLDGS INC",
-      "cusip": "22788C105",
-      "value": 3904100,
+      "name": "INNODATA INC",
+      "cusip": "457642205",
+      "value": 755800,
       "shares": 10000,
       "putCall": ""
      }
     ],
     "increased": [
      {
-      "name": "APPLE INC",
-      "cusip": "037833100",
-      "value": 7841281858,
-      "delta": 495176257
-     },
-     {
-      "name": "BERKSHIRE HATHAWAY INC DEL",
-      "cusip": "084670702",
-      "value": 4618447581,
-      "delta": 234823738
-     },
-     {
-      "name": "TESLA INC",
-      "cusip": "88160R101",
-      "value": 1421796240,
-      "delta": 154537665
-     },
-     {
-      "name": "CREDO TECHNOLOGY GROUP HOLDI",
-      "cusip": "G25457105",
-      "value": 190691340,
-      "delta": 120176196
-     },
-     {
-      "name": "DISNEY WALT CO",
-      "cusip": "254687106",
-      "value": 164260250,
-      "delta": 18552966
-     },
-     {
-      "name": "UNITEDHEALTH GROUP INC",
-      "cusip": "91324P102",
-      "value": 166085748,
-      "delta": 3352922
-     },
-     {
-      "name": "SNOWFLAKE INC",
-      "cusip": "833445109",
-      "value": 2545000,
-      "delta": 1036800
-     },
-     {
-      "name": "SYNOPSYS INC",
-      "cusip": "871607107",
-      "value": 4460700,
-      "delta": 495900
-     },
-     {
-      "name": "INNODATA INC",
-      "cusip": "457642205",
-      "value": 755800,
-      "delta": 369600
-     },
-     {
-      "name": "TEMPUS AI INC",
-      "cusip": "88023B103",
-      "value": 1158600,
-      "delta": 254200
-     }
-    ],
-    "decreased": [
-     {
-      "name": "NVIDIA CORPORATION",
-      "cusip": "67066G104",
-      "value": 1256700261,
-      "delta": -1157654099
-     },
-     {
-      "name": "ALPHABET INC",
-      "cusip": "02079K107",
-      "value": 695565438,
-      "delta": -367537722
-     },
-     {
-      "name": "OCCIDENTAL PETE CORP",
-      "cusip": "674599105",
-      "value": 498401055,
-      "delta": -168596445
-     },
-     {
       "name": "PDD HOLDINGS INC",
       "cusip": "722304102",
-      "value": 1908685330,
-      "delta": -109195351
+      "value": 2181607550,
+      "delta": 272922220
      },
      {
       "name": "MICROSOFT CORP",
       "cusip": "594918104",
-      "value": 281294382,
-      "delta": -94798338
+      "value": 356003890,
+      "delta": 74709508
      },
      {
-      "name": "CIRCLE INTERNET GROUP INC",
-      "cusip": "172573107",
-      "value": 12526000,
-      "delta": -6556000
+      "name": "OCCIDENTAL PETE CORP",
+      "cusip": "674599105",
+      "value": 567666180,
+      "delta": 69265125
+     },
+     {
+      "name": "TESLA INC",
+      "cusip": "88160R101",
+      "value": 1447624800,
+      "delta": 25828560
+     },
+     {
+      "name": "DISNEY WALT CO",
+      "cusip": "254687106",
+      "value": 179022340,
+      "delta": 14762090
      },
      {
       "name": "PALANTIR TECHNOLOGIES INC",
       "cusip": "69608A108",
-      "value": 7000200,
-      "delta": -1776600
+      "value": 11223000,
+      "delta": 4222800
+     },
+     {
+      "name": "SNOWFLAKE INC",
+      "cusip": "833445109",
+      "value": 3395600,
+      "delta": 850600
+     },
+     {
+      "name": "TEMPUS AI INC",
+      "cusip": "88023B103",
+      "value": 1638000,
+      "delta": 479400
+     }
+    ],
+    "decreased": [
+     {
+      "name": "APPLE INC",
+      "cusip": "037833100",
+      "value": 7060824247,
+      "delta": -780457611
+     },
+     {
+      "name": "NVIDIA CORPORATION",
+      "cusip": "67066G104",
+      "value": 529721701,
+      "delta": -726978560
+     },
+     {
+      "name": "BERKSHIRE HATHAWAY INC DEL",
+      "cusip": "084670702",
+      "value": 4161266568,
+      "delta": -457181013
+     },
+     {
+      "name": "ALPHABET INC",
+      "cusip": "02079K107",
+      "value": 392430258,
+      "delta": -303135180
+     },
+     {
+      "name": "CREDO TECHNOLOGY GROUP HOLDI",
+      "cusip": "G25457105",
+      "value": 117127227,
+      "delta": -73564113
+     },
+     {
+      "name": "UNITEDHEALTH GROUP INC",
+      "cusip": "91324P102",
+      "value": 146685168,
+      "delta": -19400580
+     },
+     {
+      "name": "SYNOPSYS INC",
+      "cusip": "871607107",
+      "value": 4349400,
+      "delta": -111300
      }
     ]
    }
@@ -1037,6 +1016,104 @@
    "en": "Danbin",
    "entity": "Oriental Harbor Inv. Master Fund",
    "latest": {
+    "period": "2026-09-30",
+    "filingDate": "2026-10-22",
+    "total_value": 1468720054,
+    "holdings": [
+     {
+      "name": "ADVANCED MICRO DEVICES INC",
+      "cusip": "007903107",
+      "value": 56033545,
+      "shares": 91594,
+      "putCall": ""
+     },
+     {
+      "name": "ALPHABET INC",
+      "cusip": "02079K107",
+      "value": 395341540,
+      "shares": 1160244,
+      "putCall": ""
+     },
+     {
+      "name": "AMAZON COM INC",
+      "cusip": "023135106",
+      "value": 35128156,
+      "shares": 140992,
+      "putCall": ""
+     },
+     {
+      "name": "APPLE INC",
+      "cusip": "037833100",
+      "value": 91364370,
+      "shares": 274351,
+      "putCall": ""
+     },
+     {
+      "name": "BROADCOM INC",
+      "cusip": "11135F101",
+      "value": 127833,
+      "shares": 364,
+      "putCall": ""
+     },
+     {
+      "name": "INTEL CORP",
+      "cusip": "458140100",
+      "value": 211379729,
+      "shares": 1758128,
+      "putCall": ""
+     },
+     {
+      "name": "LUMENTUM HLDGS INC",
+      "cusip": "55024U109",
+      "value": 9522233,
+      "shares": 9804,
+      "putCall": ""
+     },
+     {
+      "name": "META PLATFORMS INC",
+      "cusip": "30303M102",
+      "value": 11874097,
+      "shares": 16374,
+      "putCall": ""
+     },
+     {
+      "name": "MICRON TECHNOLOGY INC",
+      "cusip": "595112103",
+      "value": 160717643,
+      "shares": 150893,
+      "putCall": ""
+     },
+     {
+      "name": "NVIDIA CORPORATION",
+      "cusip": "67066G104",
+      "value": 281479491,
+      "shares": 1232505,
+      "putCall": ""
+     },
+     {
+      "name": "SANDISK CORP",
+      "cusip": "80004C200",
+      "value": 137031996,
+      "shares": 78759,
+      "putCall": ""
+     },
+     {
+      "name": "SPACE EXPLORATION TECHN CORP",
+      "cusip": "84615Q103",
+      "value": 15913919,
+      "shares": 105488,
+      "putCall": ""
+     },
+     {
+      "name": "TAIWAN SEMICONDUCTOR MANUFAC",
+      "cusip": "874039100",
+      "value": 62805502,
+      "shares": 137674,
+      "putCall": ""
+     }
+    ]
+   },
+   "prev": {
     "period": "2026-06-30",
     "filingDate": "2026-08-11",
     "total_value": 1649592644,
@@ -1134,120 +1211,24 @@
      }
     ]
    },
-   "prev": {
-    "period": "2026-03-31",
-    "filingDate": "2026-04-28",
-    "total_value": 1133091137,
-    "holdings": [
-     {
-      "name": "ALPHABET INC",
-      "cusip": "02079K305",
-      "value": 79670223,
-      "shares": 277056,
-      "putCall": ""
-     },
-     {
-      "name": "ALPHABET INC",
-      "cusip": "02079K107",
-      "value": 345632737,
-      "shares": 1204883,
-      "putCall": ""
-     },
-     {
-      "name": "AMAZON COM INC",
-      "cusip": "023135106",
-      "value": 37809335,
-      "shares": 181540,
-      "putCall": ""
-     },
-     {
-      "name": "APPLE INC",
-      "cusip": "037833100",
-      "value": 87373806,
-      "shares": 344276,
-      "putCall": ""
-     },
-     {
-      "name": "CIRCLE INTERNET GROUP INC",
-      "cusip": "172573107",
-      "value": 3025832,
-      "shares": 31714,
-      "putCall": ""
-     },
-     {
-      "name": "META PLATFORMS INC",
-      "cusip": "30303M102",
-      "value": 78251364,
-      "shares": 136772,
-      "putCall": ""
-     },
-     {
-      "name": "MICRON TECHNOLOGY INC",
-      "cusip": "595112103",
-      "value": 24672455,
-      "shares": 73030,
-      "putCall": ""
-     },
-     {
-      "name": "NVIDIA CORPORATION",
-      "cusip": "67066G104",
-      "value": 224227649,
-      "shares": 1285709,
-      "putCall": ""
-     },
-     {
-      "name": "TAIWAN SEMICONDUCTOR MANUFAC",
-      "cusip": "874039100",
-      "value": 70874536,
-      "shares": 209719,
-      "putCall": ""
-     },
-     {
-      "name": "TESLA INC",
-      "cusip": "88160R101",
-      "value": 74144050,
-      "shares": 199446,
-      "putCall": ""
-     },
-     {
-      "name": "DIREXION SHS ETF TR",
-      "cusip": "25461A841",
-      "value": 25646995,
-      "shares": 328597,
-      "putCall": ""
-     },
-     {
-      "name": "PROSHARES TR",
-      "cusip": "74347X831",
-      "value": 81762155,
-      "shares": 1961664,
-      "putCall": ""
-     }
-    ]
-   },
    "changes": {
     "new": [
      {
-      "name": "INTEL CORP",
-      "cusip": "458140100",
-      "value": 258230325,
-      "shares": 1849390,
+      "name": "APPLE INC",
+      "cusip": "037833100",
+      "value": 91364370,
+      "shares": 274351,
       "putCall": ""
      },
      {
-      "name": "SANDISK CORP",
-      "cusip": "80004C200",
-      "value": 175704759,
-      "shares": 77276,
+      "name": "SPACE EXPLORATION TECHN CORP",
+      "cusip": "84615Q103",
+      "value": 15913919,
+      "shares": 105488,
       "putCall": ""
-     },
-     {
-      "name": "ADVANCED MICRO DEVICES INC",
-      "cusip": "007903107",
-      "value": 146062267,
-      "shares": 251437,
-      "putCall": ""
-     },
+     }
+    ],
+    "exited": [
      {
       "name": "MARVELL TECHNOLOGY INC",
       "cusip": "573874104",
@@ -1261,104 +1242,76 @@
       "value": 53388668,
       "shares": 150573,
       "putCall": ""
-     },
-     {
-      "name": "BROADCOM INC",
-      "cusip": "11135F101",
-      "value": 24911479,
-      "shares": 65947,
-      "putCall": ""
-     },
-     {
-      "name": "LUMENTUM HLDGS INC",
-      "cusip": "55024U109",
-      "value": 22414243,
-      "shares": 26122,
-      "putCall": ""
-     }
-    ],
-    "exited": [
-     {
-      "name": "APPLE INC",
-      "cusip": "037833100",
-      "value": 87373806,
-      "shares": 344276,
-      "putCall": ""
-     },
-     {
-      "name": "PROSHARES TR",
-      "cusip": "74347X831",
-      "value": 81762155,
-      "shares": 1961664,
-      "putCall": ""
-     },
-     {
-      "name": "ALPHABET INC",
-      "cusip": "02079K305",
-      "value": 79670223,
-      "shares": 277056,
-      "putCall": ""
-     },
-     {
-      "name": "TESLA INC",
-      "cusip": "88160R101",
-      "value": 74144050,
-      "shares": 199446,
-      "putCall": ""
-     },
-     {
-      "name": "DIREXION SHS ETF TR",
-      "cusip": "25461A841",
-      "value": 25646995,
-      "shares": 328597,
-      "putCall": ""
-     },
-     {
-      "name": "CIRCLE INTERNET GROUP INC",
-      "cusip": "172573107",
-      "value": 3025832,
-      "shares": 31714,
-      "putCall": ""
      }
     ],
     "increased": [
      {
-      "name": "MICRON TECHNOLOGY INC",
-      "cusip": "595112103",
-      "value": 170358198,
-      "delta": 145685743
+      "name": "NVIDIA CORPORATION",
+      "cusip": "67066G104",
+      "value": 281479491,
+      "delta": 64616547
      },
      {
       "name": "ALPHABET INC",
       "cusip": "02079K107",
-      "value": 370873894,
-      "delta": 25241157
-     }
-    ],
-    "decreased": [
-     {
-      "name": "META PLATFORMS INC",
-      "cusip": "30303M102",
-      "value": 135752,
-      "delta": -78115612
+      "value": 395341540,
+      "delta": 24467646
      },
      {
       "name": "AMAZON COM INC",
       "cusip": "023135106",
-      "value": 14275850,
-      "delta": -23533485
+      "value": 35128156,
+      "delta": 20852306
      },
      {
-      "name": "NVIDIA CORPORATION",
-      "cusip": "67066G104",
-      "value": 216862944,
-      "delta": -7364705
+      "name": "META PLATFORMS INC",
+      "cusip": "30303M102",
+      "value": 11874097,
+      "delta": 11738345
+     }
+    ],
+    "decreased": [
+     {
+      "name": "ADVANCED MICRO DEVICES INC",
+      "cusip": "007903107",
+      "value": 56033545,
+      "delta": -90028722
+     },
+     {
+      "name": "INTEL CORP",
+      "cusip": "458140100",
+      "value": 211379729,
+      "delta": -46850596
+     },
+     {
+      "name": "SANDISK CORP",
+      "cusip": "80004C200",
+      "value": 137031996,
+      "delta": -38672763
+     },
+     {
+      "name": "BROADCOM INC",
+      "cusip": "11135F101",
+      "value": 127833,
+      "delta": -24783646
+     },
+     {
+      "name": "LUMENTUM HLDGS INC",
+      "cusip": "55024U109",
+      "value": 9522233,
+      "delta": -12892010
+     },
+     {
+      "name": "MICRON TECHNOLOGY INC",
+      "cusip": "595112103",
+      "value": 160717643,
+      "delta": -9640555
      },
      {
       "name": "TAIWAN SEMICONDUCTOR MANUFAC",
       "cusip": "874039100",
-      "value": 65565107,
-      "delta": -5309429
+      "value": 62805502,
+      "delta": -2759605
      }
     ]
    }
@@ -1369,6 +1322,69 @@
    "en": "Li Lu",
    "entity": "Himalaya Capital Mgmt LLC",
    "latest": {
+    "period": "2026-09-30",
+    "filingDate": "2026-11-16",
+    "total_value": 3781431260,
+    "holdings": [
+     {
+      "name": "ALPHABET INC",
+      "cusip": "02079K305",
+      "value": 875098664,
+      "shares": 2543300,
+      "putCall": ""
+     },
+     {
+      "name": "ALPHABET INC",
+      "cusip": "02079K107",
+      "value": 835255962,
+      "shares": 2451300,
+      "putCall": ""
+     },
+     {
+      "name": "APPLE INC",
+      "cusip": "037833100",
+      "value": 36832012,
+      "shares": 110600,
+      "putCall": ""
+     },
+     {
+      "name": "BERKSHIRE HATHAWAY INC DEL",
+      "cusip": "084670702",
+      "value": 551886948,
+      "shares": 1108318,
+      "putCall": ""
+     },
+     {
+      "name": "CROCS INC",
+      "cusip": "227046109",
+      "value": 104064880,
+      "shares": 887093,
+      "putCall": ""
+     },
+     {
+      "name": "EAST WEST BANCORP INC",
+      "cusip": "27579R104",
+      "value": 344073179,
+      "shares": 2776351,
+      "putCall": ""
+     },
+     {
+      "name": "PDD HOLDINGS INC",
+      "cusip": "722304102",
+      "value": 916661615,
+      "shares": 11761119,
+      "putCall": ""
+     },
+     {
+      "name": "TENCENT MUSIC ENTERTAINM",
+      "cusip": "88034P109",
+      "value": 117558000,
+      "shares": 14824464,
+      "putCall": ""
+     }
+    ]
+   },
+   "prev": {
     "period": "2026-06-30",
     "filingDate": "2026-08-14",
     "total_value": 3702921099,
@@ -1431,207 +1447,59 @@
      }
     ]
    },
-   "prev": {
-    "period": "2026-03-31",
-    "filingDate": "2026-05-15",
-    "total_value": 3201226867,
-    "holdings": [
-     {
-      "name": "ALPHABET INC",
-      "cusip": "02079K305",
-      "value": 731351348,
-      "shares": 2543300,
-      "putCall": ""
-     },
-     {
-      "name": "ALPHABET INC",
-      "cusip": "02079K107",
-      "value": 703179918,
-      "shares": 2451300,
-      "putCall": ""
-     },
-     {
-      "name": "APPLE INC",
-      "cusip": "037833100",
-      "value": 28069174,
-      "shares": 110600,
-      "putCall": ""
-     },
-     {
-      "name": "BK OF AMERICA CORP",
-      "cusip": "060505104",
-      "value": 146151866,
-      "shares": 2997987,
-      "putCall": ""
-     },
-     {
-      "name": "BERKSHIRE HATHAWAY INC DEL",
-      "cusip": "084670702",
-      "value": 430201321,
-      "shares": 897749,
-      "putCall": ""
-     },
-     {
-      "name": "CROCS INC",
-      "cusip": "227046109",
-      "value": 73646461,
-      "shares": 887093,
-      "putCall": ""
-     },
-     {
-      "name": "EAST WEST BANCORP INC",
-      "cusip": "27579R104",
-      "value": 296403233,
-      "shares": 2776351,
-      "putCall": ""
-     },
-     {
-      "name": "BLOCK H & R INC",
-      "cusip": "093671105",
-      "value": 51637996,
-      "shares": 1626906,
-      "putCall": ""
-     },
-     {
-      "name": "MOODYS CORP",
-      "cusip": "615369105",
-      "value": 51383270,
-      "shares": 117784,
-      "putCall": ""
-     },
-     {
-      "name": "MSCI INC",
-      "cusip": "55354G100",
-      "value": 10208310,
-      "shares": 18939,
-      "putCall": ""
-     },
-     {
-      "name": "OCCIDENTAL PETE CORP",
-      "cusip": "674599105",
-      "value": 95322500,
-      "shares": 1466500,
-      "putCall": ""
-     },
-     {
-      "name": "PDD HOLDINGS INC",
-      "cusip": "722304102",
-      "value": 470845440,
-      "shares": 4608000,
-      "putCall": ""
-     },
-     {
-      "name": "S&P GLOBAL INC",
-      "cusip": "78409V104",
-      "value": 51663072,
-      "shares": 121463,
-      "putCall": ""
-     },
-     {
-      "name": "TENCENT MUSIC ENTMT GROUP",
-      "cusip": "88034P109",
-      "value": 61162958,
-      "shares": 6590836,
-      "putCall": ""
-     }
-    ]
-   },
    "changes": {
     "new": [],
-    "exited": [
-     {
-      "name": "BK OF AMERICA CORP",
-      "cusip": "060505104",
-      "value": 146151866,
-      "shares": 2997987,
-      "putCall": ""
-     },
-     {
-      "name": "OCCIDENTAL PETE CORP",
-      "cusip": "674599105",
-      "value": 95322500,
-      "shares": 1466500,
-      "putCall": ""
-     },
-     {
-      "name": "S&P GLOBAL INC",
-      "cusip": "78409V104",
-      "value": 51663072,
-      "shares": 121463,
-      "putCall": ""
-     },
-     {
-      "name": "BLOCK H & R INC",
-      "cusip": "093671105",
-      "value": 51637996,
-      "shares": 1626906,
-      "putCall": ""
-     },
-     {
-      "name": "MOODYS CORP",
-      "cusip": "615369105",
-      "value": 51383270,
-      "shares": 117784,
-      "putCall": ""
-     },
-     {
-      "name": "MSCI INC",
-      "cusip": "55354G100",
-      "value": 10208310,
-      "shares": 18939,
-      "putCall": ""
-     }
-    ],
+    "exited": [],
     "increased": [
      {
       "name": "PDD HOLDINGS INC",
       "cusip": "722304102",
-      "value": 820858157,
-      "delta": 350012717
+      "value": 916661615,
+      "delta": 95803458
      },
      {
-      "name": "ALPHABET INC",
-      "cusip": "02079K305",
-      "value": 908899121,
-      "delta": 177547773
-     },
-     {
-      "name": "ALPHABET INC",
-      "cusip": "02079K107",
-      "value": 866117829,
-      "delta": 162937911
-     },
-     {
-      "name": "BERKSHIRE HATHAWAY INC DEL",
-      "cusip": "084670702",
-      "value": 554591244,
-      "delta": 124389923
-     },
-     {
-      "name": "EAST WEST BANCORP INC",
-      "cusip": "27579R104",
-      "value": 358399151,
-      "delta": 61995918
-     },
-     {
-      "name": "CROCS INC",
-      "cusip": "227046109",
-      "value": 107018900,
-      "delta": 33372439
+      "name": "TENCENT MUSIC ENTERTAINM",
+      "cusip": "88034P109",
+      "value": 117558000,
+      "delta": 62524519
      },
      {
       "name": "APPLE INC",
       "cusip": "037833100",
-      "value": 32003216,
-      "delta": 3934042
+      "value": 36832012,
+      "delta": 4828796
      }
     ],
     "decreased": [
      {
-      "name": "TENCENT MUSIC ENTERTAINM",
-      "cusip": "88034P109",
-      "value": 55033481,
-      "delta": -6129477
+      "name": "ALPHABET INC",
+      "cusip": "02079K305",
+      "value": 875098664,
+      "delta": -33800457
+     },
+     {
+      "name": "ALPHABET INC",
+      "cusip": "02079K107",
+      "value": 835255962,
+      "delta": -30861867
+     },
+     {
+      "name": "EAST WEST BANCORP INC",
+      "cusip": "27579R104",
+      "value": 344073179,
+      "delta": -14325972
+     },
+     {
+      "name": "CROCS INC",
+      "cusip": "227046109",
+      "value": 104064880,
+      "delta": -2954020
+     },
+     {
+      "name": "BERKSHIRE HATHAWAY INC DEL",
+      "cusip": "084670702",
+      "value": 551886948,
+      "delta": -2704296
      }
     ]
    }
@@ -1642,6 +1510,293 @@
    "en": "Zhang Lei (Hillhouse)",
    "entity": "HHLR Advisors, Ltd.",
    "latest": {
+    "period": "2026-09-30",
+    "filingDate": "2026-11-16",
+    "total_value": 1543219087,
+    "holdings": [
+     {
+      "name": "AGORA INC",
+      "cusip": "00851L103",
+      "value": 8771952,
+      "shares": 2098553,
+      "putCall": ""
+     },
+     {
+      "name": "ALAMAR BIOSCIENCES INC",
+      "cusip": "010911105",
+      "value": 32586660,
+      "shares": 956462,
+      "putCall": ""
+     },
+     {
+      "name": "ALIBABA GROUP HLDG LTD",
+      "cusip": "01609W102",
+      "value": 267753092,
+      "shares": 2489800,
+      "putCall": ""
+     },
+     {
+      "name": "ALIGOS THERAPEUTICS INC",
+      "cusip": "01626L204",
+      "value": 429271,
+      "shares": 76247,
+      "putCall": ""
+     },
+     {
+      "name": "ALPHABET INC",
+      "cusip": "02079K305",
+      "value": 1996352,
+      "shares": 5802,
+      "putCall": ""
+     },
+     {
+      "name": "AMAZON COM INC",
+      "cusip": "023135106",
+      "value": 6028932,
+      "shares": 24198,
+      "putCall": ""
+     },
+     {
+      "name": "ARRIVENT BIOPHARMA INC",
+      "cusip": "04272N102",
+      "value": 118973663,
+      "shares": 3929117,
+      "putCall": ""
+     },
+     {
+      "name": "CEREBRAS SYSTEMS INC",
+      "cusip": "15675D103",
+      "value": 7637884,
+      "shares": 42994,
+      "putCall": ""
+     },
+     {
+      "name": "CONTINEUM THERAPEUTICS INC",
+      "cusip": "21217B100",
+      "value": 8982503,
+      "shares": 669337,
+      "putCall": ""
+     },
+     {
+      "name": "CYTEK BIOSCIENCES INC",
+      "cusip": "23285D109",
+      "value": 39675899,
+      "shares": 6657030,
+      "putCall": ""
+     },
+     {
+      "name": "EQUINOX GOLD CORP",
+      "cusip": "29446Y502",
+      "value": 894355,
+      "shares": 80500,
+      "putCall": ""
+     },
+     {
+      "name": "FULL TRUCK ALLIANCE CO LTD",
+      "cusip": "35969L108",
+      "value": 162065966,
+      "shares": 19596852,
+      "putCall": ""
+     },
+     {
+      "name": "FUTU HLDGS LTD",
+      "cusip": "36118L106",
+      "value": 69757050,
+      "shares": 631000,
+      "putCall": ""
+     },
+     {
+      "name": "GE AEROSPACE",
+      "cusip": "369604301",
+      "value": 3136328,
+      "shares": 10043,
+      "putCall": ""
+     },
+     {
+      "name": "GOSSAMER BIO INC",
+      "cusip": "38341P201",
+      "value": 736774,
+      "shares": 62175,
+      "putCall": ""
+     },
+     {
+      "name": "INTEL CORP",
+      "cusip": "458140100",
+      "value": 4170538,
+      "shares": 34688,
+      "putCall": ""
+     },
+     {
+      "name": "KE HLDGS INC",
+      "cusip": "482497104",
+      "value": 4542962,
+      "shares": 269612,
+      "putCall": ""
+     },
+     {
+      "name": "LEGEND BIOTECH CORP",
+      "cusip": "52490G102",
+      "value": 166308763,
+      "shares": 8361426,
+      "putCall": ""
+     },
+     {
+      "name": "LUMENTUM HLDGS INC",
+      "cusip": "55024U109",
+      "value": 1699705,
+      "shares": 1750,
+      "putCall": ""
+     },
+     {
+      "name": "MARVELL TECHNOLOGY INC",
+      "cusip": "573874104",
+      "value": 40670638,
+      "shares": 153933,
+      "putCall": ""
+     },
+     {
+      "name": "MAZE THERAPEUTICS INC",
+      "cusip": "578784100",
+      "value": 9948695,
+      "shares": 366030,
+      "putCall": ""
+     },
+     {
+      "name": "MICROSOFT CORP",
+      "cusip": "594918104",
+      "value": 1866956,
+      "shares": 3640,
+      "putCall": ""
+     },
+     {
+      "name": "MOGU INC",
+      "cusip": "608012308",
+      "value": 1576369,
+      "shares": 847510,
+      "putCall": ""
+     },
+     {
+      "name": "MOODYS CORP",
+      "cusip": "615369105",
+      "value": 1207532,
+      "shares": 2659,
+      "putCall": ""
+     },
+     {
+      "name": "NETEASE COM INC",
+      "cusip": "64110W102",
+      "value": 4240479,
+      "shares": 34999,
+      "putCall": ""
+     },
+     {
+      "name": "NOVABRIDGE BIOSCIENCES",
+      "cusip": "44975P103",
+      "value": 8163475,
+      "shares": 5980568,
+      "putCall": ""
+     },
+     {
+      "name": "NVIDIA CORPORATION",
+      "cusip": "67066G104",
+      "value": 3209653,
+      "shares": 14054,
+      "putCall": ""
+     },
+     {
+      "name": "ODYSSEY THERAPEUTICS INC",
+      "cusip": "67613T104",
+      "value": 18479396,
+      "shares": 831656,
+      "putCall": ""
+     },
+     {
+      "name": "PACIFIC BIOSCIENCES CALIF IN",
+      "cusip": "69404D108",
+      "value": 2177774,
+      "shares": 918892,
+      "putCall": ""
+     },
+     {
+      "name": "PAYPAY CORP",
+      "cusip": "70450C101",
+      "value": 1635548,
+      "shares": 104175,
+      "putCall": ""
+     },
+     {
+      "name": "PDD HOLDINGS INC",
+      "cusip": "722304102",
+      "value": 346599180,
+      "shares": 4447000,
+      "putCall": ""
+     },
+     {
+      "name": "RIDGETECH INC",
+      "cusip": "G2124G203",
+      "value": 111,
+      "shares": 135,
+      "putCall": ""
+     },
+     {
+      "name": "S&P GLOBAL INC",
+      "cusip": "78409V104",
+      "value": 1227591,
+      "shares": 3112,
+      "putCall": ""
+     },
+     {
+      "name": "SK HYNIX INC",
+      "cusip": "78392B206",
+      "value": 1478356,
+      "shares": 8028,
+      "putCall": ""
+     },
+     {
+      "name": "TAIWAN SEMICONDUCTOR MANUFAC",
+      "cusip": "874039100",
+      "value": 8625184,
+      "shares": 18907,
+      "putCall": ""
+     },
+     {
+      "name": "TRIP COM GROUP LTD",
+      "cusip": "89677Q107",
+      "value": 83177430,
+      "shares": 2127300,
+      "putCall": ""
+     },
+     {
+      "name": "TUYA INC",
+      "cusip": "90114C107",
+      "value": 2659480,
+      "shares": 1564400,
+      "putCall": ""
+     },
+     {
+      "name": "VIPSHOP HLDGS LTD",
+      "cusip": "92763W103",
+      "value": 85726026,
+      "shares": 6852600,
+      "putCall": ""
+     },
+     {
+      "name": "YATSEN HLDG LTD",
+      "cusip": "985194208",
+      "value": 13582727,
+      "shares": 4885873,
+      "putCall": ""
+     },
+     {
+      "name": "ZOOM COMMUNICATIONS INC",
+      "cusip": "98980L101",
+      "value": 817838,
+      "shares": 9010,
+      "putCall": ""
+     }
+    ]
+   },
+   "prev": {
     "period": "2026-06-30",
     "filingDate": "2026-08-14",
     "total_value": 832072843,
@@ -1893,300 +2048,113 @@
      }
     ]
    },
-   "prev": {
-    "period": "2026-03-31",
-    "filingDate": "2026-05-15",
-    "total_value": 1672822114,
-    "holdings": [
+   "changes": {
+    "new": [
      {
-      "name": "AGORA INC",
-      "cusip": "00851L103",
-      "value": 7428878,
-      "shares": 2098553,
+      "name": "FULL TRUCK ALLIANCE CO LTD",
+      "cusip": "35969L108",
+      "value": 162065966,
+      "shares": 19596852,
       "putCall": ""
      },
      {
-      "name": "ALIBABA GROUP HLDG LTD",
-      "cusip": "01609W102",
-      "value": 307835807,
-      "shares": 2453657,
+      "name": "TRIP COM GROUP LTD",
+      "cusip": "89677Q107",
+      "value": 83177430,
+      "shares": 2127300,
       "putCall": ""
      },
      {
-      "name": "ALIGOS THERAPEUTICS INC",
-      "cusip": "01626L204",
-      "value": 566515,
-      "shares": 76247,
+      "name": "CEREBRAS SYSTEMS INC",
+      "cusip": "15675D103",
+      "value": 7637884,
+      "shares": 42994,
       "putCall": ""
      },
      {
-      "name": "ARRIVENT BIOPHARMA INC",
-      "cusip": "04272N102",
-      "value": 90644729,
-      "shares": 3929117,
+      "name": "AMAZON COM INC",
+      "cusip": "023135106",
+      "value": 6028932,
+      "shares": 24198,
       "putCall": ""
      },
      {
-      "name": "CENTRAIS ELET BRAS SA",
-      "cusip": "15234Q207",
-      "value": 711768,
-      "shares": 63100,
+      "name": "ALPHABET INC",
+      "cusip": "02079K305",
+      "value": 1996352,
+      "shares": 5802,
       "putCall": ""
      },
      {
-      "name": "BARRICK MNG CORP",
-      "cusip": "06849F108",
-      "value": 1036066,
-      "shares": 25400,
+      "name": "MICROSOFT CORP",
+      "cusip": "594918104",
+      "value": 1866956,
+      "shares": 3640,
       "putCall": ""
      },
      {
-      "name": "BEONE MEDICINES LTD",
-      "cusip": "07725L102",
-      "value": 307157853,
-      "shares": 1034306,
+      "name": "PAYPAY CORP",
+      "cusip": "70450C101",
+      "value": 1635548,
+      "shares": 104175,
       "putCall": ""
      },
      {
-      "name": "CLEARWATER ANALYTICS HLDGS I",
-      "cusip": "185123106",
-      "value": 32305214,
-      "shares": 1365971,
+      "name": "SK HYNIX INC",
+      "cusip": "78392B206",
+      "value": 1478356,
+      "shares": 8028,
       "putCall": ""
      },
      {
-      "name": "COHERENT CORP",
-      "cusip": "19247G107",
-      "value": 1018348,
-      "shares": 4275,
+      "name": "S&P GLOBAL INC",
+      "cusip": "78409V104",
+      "value": 1227591,
+      "shares": 3112,
       "putCall": ""
      },
      {
-      "name": "CONTINEUM THERAPEUTICS INC",
-      "cusip": "21217B100",
-      "value": 8741541,
-      "shares": 669337,
+      "name": "MOODYS CORP",
+      "cusip": "615369105",
+      "value": 1207532,
+      "shares": 2659,
+      "putCall": ""
+     },
+     {
+      "name": "GOSSAMER BIO INC",
+      "cusip": "38341P201",
+      "value": 736774,
+      "shares": 62175,
+      "putCall": ""
+     }
+    ],
+    "exited": [
+     {
+      "name": "SAGIMET BIOSCIENCES INC",
+      "cusip": "786700104",
+      "value": 5602704,
+      "shares": 724800,
       "putCall": ""
      },
      {
       "name": "CORNING INC",
       "cusip": "219350105",
-      "value": 1046969,
-      "shares": 7700,
+      "value": 2622244,
+      "shares": 10266,
       "putCall": ""
      },
      {
-      "name": "CYTEK BIOSCIENCES INC",
-      "cusip": "23285D109",
-      "value": 29091221,
-      "shares": 6657030,
-      "putCall": ""
-     },
-     {
-      "name": "DINGDONG CAYMAN LTD",
-      "cusip": "25445D101",
-      "value": 911065,
-      "shares": 354500,
-      "putCall": ""
-     },
-     {
-      "name": "EQUINOX GOLD CORP",
-      "cusip": "29446Y502",
-      "value": 1164030,
-      "shares": 80500,
-      "putCall": ""
-     },
-     {
-      "name": "FUTU HLDGS LTD",
-      "cusip": "36118L106",
-      "value": 194128495,
-      "shares": 1419483,
-      "putCall": ""
-     },
-     {
-      "name": "GE AEROSPACE",
-      "cusip": "369604301",
-      "value": 2849902,
-      "shares": 10043,
-      "putCall": ""
-     },
-     {
-      "name": "GOSSAMER BIO INC",
-      "cusip": "38341P102",
-      "value": 1633972,
-      "shares": 4974041,
-      "putCall": ""
-     },
-     {
-      "name": "INTEL CORP",
-      "cusip": "458140100",
-      "value": 1278446,
-      "shares": 28970,
-      "putCall": ""
-     },
-     {
-      "name": "ISHARES INC",
-      "cusip": "464286822",
-      "value": 662024,
-      "shares": 8800,
-      "putCall": ""
-     },
-     {
-      "name": "KE HLDGS INC",
-      "cusip": "482497104",
-      "value": 63417082,
-      "shares": 4236278,
-      "putCall": ""
-     },
-     {
-      "name": "LEGEND BIOTECH CORP",
-      "cusip": "52490G102",
-      "value": 108260510,
-      "shares": 5984550,
-      "putCall": ""
-     },
-     {
-      "name": "LUMENTUM HLDGS INC",
-      "cusip": "55024U109",
-      "value": 1054140,
-      "shares": 1500,
-      "putCall": ""
-     },
-     {
-      "name": "MAZE THERAPEUTICS INC",
-      "cusip": "578784100",
-      "value": 10925936,
-      "shares": 366028,
-      "putCall": ""
-     },
-     {
-      "name": "MARVELL TECHNOLOGY INC",
-      "cusip": "573874104",
-      "value": 16940819,
-      "shares": 171033,
-      "putCall": ""
-     },
-     {
-      "name": "MOGU INC",
-      "cusip": "608012308",
-      "value": 1889947,
-      "shares": 847510,
-      "putCall": ""
-     },
-     {
-      "name": "NOVABRIDGE BIOSCIENCES",
-      "cusip": "44975P103",
-      "value": 14712197,
-      "shares": 5980568,
-      "putCall": ""
-     },
-     {
-      "name": "NVIDIA CORPORATION",
-      "cusip": "67066G104",
-      "value": 1152784,
-      "shares": 6610,
-      "putCall": ""
-     },
-     {
-      "name": "PACIFIC BIOSCIENCES CALIF IN",
-      "cusip": "69404D108",
-      "value": 1212937,
-      "shares": 918892,
-      "putCall": ""
-     },
-     {
-      "name": "PDD HOLDINGS INC",
-      "cusip": "722304102",
-      "value": 425582663,
-      "shares": 4165029,
-      "putCall": ""
-     },
-     {
-      "name": "RIDGETECH INC",
-      "cusip": "G2124G120",
-      "value": 657,
-      "shares": 20167,
-      "putCall": ""
-     },
-     {
-      "name": "SAGIMET BIOSCIENCES INC",
-      "cusip": "786700104",
-      "value": 3787080,
-      "shares": 724800,
-      "putCall": ""
-     },
-     {
-      "name": "TAIWAN SEMICONDUCTOR MANUFAC",
-      "cusip": "874039100",
-      "value": 5244984,
-      "shares": 15520,
-      "putCall": ""
-     },
-     {
-      "name": "TUYA INC",
-      "cusip": "90114C107",
-      "value": 3613764,
-      "shares": 1564400,
-      "putCall": ""
-     },
-     {
-      "name": "UXIN LTD",
-      "cusip": "91818X306",
-      "value": 58809,
-      "shares": 19156,
-      "putCall": ""
-     },
-     {
-      "name": "VIPSHOP HLDGS LTD",
-      "cusip": "92763W103",
-      "value": 1960284,
-      "shares": 124700,
-      "putCall": ""
-     },
-     {
-      "name": "VNET GROUP INC",
-      "cusip": "90138A103",
-      "value": 546189,
-      "shares": 65100,
+      "name": "COHERENT CORP",
+      "cusip": "19247G107",
+      "value": 2531314,
+      "shares": 6417,
       "putCall": ""
      },
      {
       "name": "WEBULL CORP",
       "cusip": "G9572D103",
-      "value": 7200000,
-      "shares": 1500000,
-      "putCall": ""
-     },
-     {
-      "name": "YATSEN HLDG LTD",
-      "cusip": "985194208",
-      "value": 15048489,
-      "shares": 4885873,
-      "putCall": ""
-     }
-    ]
-   },
-   "changes": {
-    "new": [
-     {
-      "name": "ALAMAR BIOSCIENCES INC",
-      "cusip": "010911105",
-      "value": 25910556,
-      "shares": 956462,
-      "putCall": ""
-     },
-     {
-      "name": "ODYSSEY THERAPEUTICS INC",
-      "cusip": "67613T104",
-      "value": 15560284,
-      "shares": 831656,
-      "putCall": ""
-     },
-     {
-      "name": "NETEASE COM INC",
-      "cusip": "64110W102",
-      "value": 4484772,
-      "shares": 34999,
+      "value": 2020268,
+      "shares": 309857,
       "putCall": ""
      },
      {
@@ -2197,261 +2165,189 @@
       "putCall": ""
      },
      {
-      "name": "ZOOM COMMUNICATIONS INC",
-      "cusip": "98980L101",
-      "value": 777653,
-      "shares": 9010,
-      "putCall": ""
-     },
-     {
-      "name": "RIDGETECH INC",
-      "cusip": "G2124G203",
-      "value": 204,
-      "shares": 136,
-      "putCall": ""
-     }
-    ],
-    "exited": [
-     {
-      "name": "BEONE MEDICINES LTD",
-      "cusip": "07725L102",
-      "value": 307157853,
-      "shares": 1034306,
-      "putCall": ""
-     },
-     {
-      "name": "CLEARWATER ANALYTICS HLDGS I",
-      "cusip": "185123106",
-      "value": 32305214,
-      "shares": 1365971,
-      "putCall": ""
-     },
-     {
-      "name": "BARRICK MNG CORP",
-      "cusip": "06849F108",
-      "value": 1036066,
-      "shares": 25400,
-      "putCall": ""
-     },
-     {
-      "name": "DINGDONG CAYMAN LTD",
-      "cusip": "25445D101",
-      "value": 911065,
-      "shares": 354500,
-      "putCall": ""
-     },
-     {
-      "name": "CENTRAIS ELET BRAS SA",
-      "cusip": "15234Q207",
-      "value": 711768,
-      "shares": 63100,
-      "putCall": ""
-     },
-     {
-      "name": "ISHARES INC",
-      "cusip": "464286822",
-      "value": 662024,
-      "shares": 8800,
-      "putCall": ""
-     },
-     {
-      "name": "VNET GROUP INC",
-      "cusip": "90138A103",
-      "value": 546189,
-      "shares": 65100,
-      "putCall": ""
-     },
-     {
-      "name": "UXIN LTD",
-      "cusip": "91818X306",
-      "value": 58809,
-      "shares": 19156,
-      "putCall": ""
-     },
-     {
-      "name": "RIDGETECH INC",
-      "cusip": "G2124G120",
-      "value": 657,
-      "shares": 20167,
+      "name": "GOSSAMER BIO INC",
+      "cusip": "38341P102",
+      "value": 818727,
+      "shares": 4974041,
       "putCall": ""
      }
     ],
     "increased": [
      {
-      "name": "LEGEND BIOTECH CORP",
-      "cusip": "52490G102",
-      "value": 172833804,
-      "delta": 64573294
-     },
-     {
-      "name": "ARRIVENT BIOPHARMA INC",
-      "cusip": "04272N102",
-      "value": 136497525,
-      "delta": 45852796
-     },
-     {
-      "name": "VIPSHOP HLDGS LTD",
-      "cusip": "92763W103",
-      "value": 46017504,
-      "delta": 44057220
-     },
-     {
-      "name": "MARVELL TECHNOLOGY INC",
-      "cusip": "573874104",
-      "value": 48536111,
-      "delta": 31595292
-     },
-     {
-      "name": "CONTINEUM THERAPEUTICS INC",
-      "cusip": "21217B100",
-      "value": 10970433,
-      "delta": 2228892
-     },
-     {
-      "name": "TAIWAN SEMICONDUCTOR MANUFAC",
-      "cusip": "874039100",
-      "value": 7407111,
-      "delta": 2162127
-     },
-     {
-      "name": "SAGIMET BIOSCIENCES INC",
-      "cusip": "786700104",
-      "value": 5602704,
-      "delta": 1815624
-     },
-     {
-      "name": "LUMENTUM HLDGS INC",
-      "cusip": "55024U109",
-      "value": 2831598,
-      "delta": 1777458
-     },
-     {
-      "name": "NVIDIA CORPORATION",
-      "cusip": "67066G104",
-      "value": 2812065,
-      "delta": 1659281
-     },
-     {
-      "name": "CORNING INC",
-      "cusip": "219350105",
-      "value": 2622244,
-      "delta": 1575275
-     },
-     {
-      "name": "COHERENT CORP",
-      "cusip": "19247G107",
-      "value": 2531314,
-      "delta": 1512966
-     },
-     {
-      "name": "AGORA INC",
-      "cusip": "00851L103",
-      "value": 8373226,
-      "delta": 944348
-     },
-     {
-      "name": "GE AEROSPACE",
-      "cusip": "369604301",
-      "value": 3753370,
-      "delta": 903468
-     },
-     {
-      "name": "INTEL CORP",
-      "cusip": "458140100",
-      "value": 1996709,
-      "delta": 718263
-     },
-     {
-      "name": "YATSEN HLDG LTD",
-      "cusip": "985194208",
-      "value": 15488217,
-      "delta": 439728
-     },
-     {
-      "name": "CYTEK BIOSCIENCES INC",
-      "cusip": "23285D109",
-      "value": 29490643,
-      "delta": 399422
-     },
-     {
-      "name": "PACIFIC BIOSCIENCES CALIF IN",
-      "cusip": "69404D108",
-      "value": 1543739,
-      "delta": 330802
-     }
-    ],
-    "decreased": [
-     {
       "name": "PDD HOLDINGS INC",
       "cusip": "722304102",
-      "value": 38140000,
-      "delta": -387442663
+      "value": 346599180,
+      "delta": 308459180
      },
      {
       "name": "ALIBABA GROUP HLDG LTD",
       "cusip": "01609W102",
-      "value": 17653985,
-      "delta": -290181822
+      "value": 267753092,
+      "delta": 250099107
      },
      {
-      "name": "KE HLDGS INC",
-      "cusip": "482497104",
-      "value": 32233018,
-      "delta": -31184064
+      "name": "VIPSHOP HLDGS LTD",
+      "cusip": "92763W103",
+      "value": 85726026,
+      "delta": 39708522
      },
      {
-      "name": "FUTU HLDGS LTD",
-      "cusip": "36118L106",
-      "value": 165758848,
-      "delta": -28369647
+      "name": "CYTEK BIOSCIENCES INC",
+      "cusip": "23285D109",
+      "value": 39675899,
+      "delta": 10185256
      },
      {
-      "name": "WEBULL CORP",
-      "cusip": "G9572D103",
-      "value": 2020268,
-      "delta": -5179732
+      "name": "ALAMAR BIOSCIENCES INC",
+      "cusip": "010911105",
+      "value": 32586660,
+      "delta": 6676104
      },
      {
-      "name": "NOVABRIDGE BIOSCIENCES",
-      "cusip": "44975P103",
-      "value": 11662108,
-      "delta": -3050089
+      "name": "ODYSSEY THERAPEUTICS INC",
+      "cusip": "67613T104",
+      "value": 18479396,
+      "delta": 2919112
      },
      {
-      "name": "TUYA INC",
-      "cusip": "90114C107",
-      "value": 2753344,
-      "delta": -860420
+      "name": "INTEL CORP",
+      "cusip": "458140100",
+      "value": 4170538,
+      "delta": 2173829
      },
      {
-      "name": "GOSSAMER BIO INC",
-      "cusip": "38341P102",
-      "value": 818727,
-      "delta": -815245
+      "name": "TAIWAN SEMICONDUCTOR MANUFAC",
+      "cusip": "874039100",
+      "value": 8625184,
+      "delta": 1218073
+     },
+     {
+      "name": "PACIFIC BIOSCIENCES CALIF IN",
+      "cusip": "69404D108",
+      "value": 2177774,
+      "delta": 634035
+     },
+     {
+      "name": "AGORA INC",
+      "cusip": "00851L103",
+      "value": 8771952,
+      "delta": 398726
+     },
+     {
+      "name": "NVIDIA CORPORATION",
+      "cusip": "67066G104",
+      "value": 3209653,
+      "delta": 397588
      },
      {
       "name": "MOGU INC",
       "cusip": "608012308",
-      "value": 1415342,
-      "delta": -474605
+      "value": 1576369,
+      "delta": 161027
      },
      {
       "name": "EQUINOX GOLD CORP",
       "cusip": "29446Y502",
-      "value": 782460,
-      "delta": -381570
+      "value": 894355,
+      "delta": 111895
      },
      {
-      "name": "ALIGOS THERAPEUTICS INC",
-      "cusip": "01626L204",
-      "value": 439945,
-      "delta": -126570
+      "name": "ZOOM COMMUNICATIONS INC",
+      "cusip": "98980L101",
+      "value": 817838,
+      "delta": 40185
+     }
+    ],
+    "decreased": [
+     {
+      "name": "FUTU HLDGS LTD",
+      "cusip": "36118L106",
+      "value": 69757050,
+      "delta": -96001798
+     },
+     {
+      "name": "KE HLDGS INC",
+      "cusip": "482497104",
+      "value": 4542962,
+      "delta": -27690056
+     },
+     {
+      "name": "ARRIVENT BIOPHARMA INC",
+      "cusip": "04272N102",
+      "value": 118973663,
+      "delta": -17523862
+     },
+     {
+      "name": "MARVELL TECHNOLOGY INC",
+      "cusip": "573874104",
+      "value": 40670638,
+      "delta": -7865473
+     },
+     {
+      "name": "LEGEND BIOTECH CORP",
+      "cusip": "52490G102",
+      "value": 166308763,
+      "delta": -6525041
+     },
+     {
+      "name": "NOVABRIDGE BIOSCIENCES",
+      "cusip": "44975P103",
+      "value": 8163475,
+      "delta": -3498633
+     },
+     {
+      "name": "CONTINEUM THERAPEUTICS INC",
+      "cusip": "21217B100",
+      "value": 8982503,
+      "delta": -1987930
+     },
+     {
+      "name": "YATSEN HLDG LTD",
+      "cusip": "985194208",
+      "value": 13582727,
+      "delta": -1905490
+     },
+     {
+      "name": "LUMENTUM HLDGS INC",
+      "cusip": "55024U109",
+      "value": 1699705,
+      "delta": -1131893
      },
      {
       "name": "MAZE THERAPEUTICS INC",
       "cusip": "578784100",
-      "value": 10922276,
-      "delta": -3660
+      "value": 9948695,
+      "delta": -973581
+     },
+     {
+      "name": "GE AEROSPACE",
+      "cusip": "369604301",
+      "value": 3136328,
+      "delta": -617042
+     },
+     {
+      "name": "NETEASE COM INC",
+      "cusip": "64110W102",
+      "value": 4240479,
+      "delta": -244293
+     },
+     {
+      "name": "TUYA INC",
+      "cusip": "90114C107",
+      "value": 2659480,
+      "delta": -93864
+     },
+     {
+      "name": "ALIGOS THERAPEUTICS INC",
+      "cusip": "01626L204",
+      "value": 429271,
+      "delta": -10674
+     },
+     {
+      "name": "RIDGETECH INC",
+      "cusip": "G2124G203",
+      "value": 111,
+      "delta": -93
      }
     ]
    }
@@ -2475,7 +2371,18 @@
    "holders": [
     "buffett",
     "duan",
+    "danbin",
     "lilu"
+   ],
+   "count": 4
+  },
+  {
+   "cusip": "02079K305",
+   "name": "ALPHABET INC",
+   "holders": [
+    "buffett",
+    "lilu",
+    "zhanglei"
    ],
    "count": 3
   },
@@ -2500,11 +2407,11 @@
    "count": 3
   },
   {
-   "cusip": "02079K305",
-   "name": "ALPHABET INC",
+   "cusip": "615369105",
+   "name": "MOODYS CORP",
    "holders": [
     "buffett",
-    "lilu"
+    "zhanglei"
    ],
    "count": 2
   },
@@ -2518,8 +2425,17 @@
    "count": 2
   },
   {
-   "cusip": "01609W102",
-   "name": "ALIBABA GROUP HLDG LTD",
+   "cusip": "084670702",
+   "name": "BERKSHIRE HATHAWAY INC DEL",
+   "holders": [
+    "duan",
+    "lilu"
+   ],
+   "count": 2
+  },
+  {
+   "cusip": "594918104",
+   "name": "MICROSOFT CORP",
    "holders": [
     "duan",
     "zhanglei"
@@ -2527,11 +2443,20 @@
    "count": 2
   },
   {
-   "cusip": "084670702",
-   "name": "BERKSHIRE HATHAWAY INC DEL",
+   "cusip": "84615Q103",
+   "name": "SPACE EXPLORATION TECHN CORP",
    "holders": [
     "duan",
-    "lilu"
+    "danbin"
+   ],
+   "count": 2
+  },
+  {
+   "cusip": "023135106",
+   "name": "AMAZON COM INC",
+   "holders": [
+    "danbin",
+    "zhanglei"
    ],
    "count": 2
   },
@@ -2547,15 +2472,6 @@
   {
    "cusip": "55024U109",
    "name": "LUMENTUM HLDGS INC",
-   "holders": [
-    "danbin",
-    "zhanglei"
-   ],
-   "count": 2
-  },
-  {
-   "cusip": "573874104",
-   "name": "MARVELL TECHNOLOGY INC",
    "holders": [
     "danbin",
     "zhanglei"
