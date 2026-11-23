@@ -1358,6 +1358,19 @@
       "score": 80,
       "daily": 8000,
       "premium": 17.0
+    },
+    {
+      "date": "2026-11-23",
+      "pe": 25.46,
+      "pe_pct": 15.3,
+      "vix": 35.89,
+      "ndx": 25028,
+      "dd_pct": -20.19,
+      "tier": "low",
+      "phase": "②",
+      "score": 80,
+      "daily": 8000,
+      "premium": 17.0
     }
   ],
   "last_data_hash": "25.46|35.89|25028"
