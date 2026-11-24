@@ -5,7 +5,7 @@
   "sell_week": 0,
   "has_sold": false,
   "last_effective_tier": "mid_low",
-  "bear_start_date": "2026-11-20",
+  "bear_start_date": null,
   "history": [
     {
       "date": "2026-08-10",
@@ -1371,7 +1371,20 @@
       "score": 80,
       "daily": 8000,
       "premium": 15.6
+    },
+    {
+      "date": "2026-11-24",
+      "pe": 25.46,
+      "pe_pct": 15.3,
+      "vix": 26.62,
+      "ndx": 26746,
+      "dd_pct": -14.72,
+      "tier": "low",
+      "phase": "①",
+      "score": 74,
+      "daily": 6000,
+      "premium": 22.4
     }
   ],
-  "last_data_hash": "25.46|31.36|25028"
+  "last_data_hash": "25.46|26.62|26746"
 }
