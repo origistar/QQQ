@@ -1376,15 +1376,15 @@
       "date": "2026-11-24",
       "pe": 25.31,
       "pe_pct": 14.0,
-      "vix": 26.62,
+      "vix": 27.74,
       "ndx": 26746,
       "dd_pct": -14.72,
       "tier": "low",
       "phase": "①",
-      "score": 74,
+      "score": 75,
       "daily": 6000,
-      "premium": 27.2
+      "premium": 27.3
     }
   ],
-  "last_data_hash": "25.31|26.62|26746"
+  "last_data_hash": "25.31|27.74|26746"
 }
