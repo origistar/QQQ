@@ -1389,15 +1389,15 @@
       "date": "2026-11-25",
       "pe": 24.85,
       "pe_pct": 11.3,
-      "vix": 28.69,
-      "ndx": 26214,
-      "dd_pct": -16.41,
+      "vix": 28.29,
+      "ndx": 26046,
+      "dd_pct": -16.95,
       "tier": "low",
       "phase": "①",
       "score": 78,
       "daily": 9000,
-      "premium": 14.6
+      "premium": 16.9
     }
   ],
-  "last_data_hash": "24.85|28.69|26214"
+  "last_data_hash": "24.85|28.29|26046"
 }
